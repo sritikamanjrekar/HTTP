@@ -181,14 +181,111 @@
       font-family: inherit;
     }
 
-   
+    /* Define animation */
+    @keyframes colorChange {
+      0% {
+        color: #000f64;
+      }
+
+      50% {
+        color: #00b3ff;
+      }
+
+      100% {
+        color: #000f64;
+      }
+    }
+
+    /* Apply animation to the span */
+    h1 span:hover {
+      animation: colorChange 5s infinite;
+    }
+
+
+    @keyframes moveRight {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(1000%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* .model-viewer-animation {
+      animation: moveRight 180000s linear 2;
+      /* Increased duration to 180000s (50 hours) */
+    /* } */
+
+    @keyframes moveUpRight {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+
+      20% {
+        transform: translateY(-38vh) translateX(35vw);
+      }
+
+      40% {
+        transform: translateY(-38vh) translateX(67vw);
+      }
+
+      60% {
+        transform: translateY(-38vh) translateX(35vw);
+      }
+
+      100% {
+        transform: translateY(0) translateX(0);
+      }
 
 
 
+
+    }
+
+    @keyframes moveUpRightStraight {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+
+      20% {
+        transform: translateY(-38vh) translateX(0);
+      }
+
+      40% {
+        transform: translateY(-38vh) translateX(29vw);
+      }
+
+      60% {
+        transform: translateY(-38vh) translateX(0vw);
+      }
+
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+
+
+
+
+    }
+
+
+
+    #model2 {
+      animation: moveUpRight 20s ease-in-out 3 forwards;
+    }
+
+    #model3 {
+      animation: moveUpRightStraight 20s ease-in-out 3 forwards;
+    }
   </style>
 
-<link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
- 
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -201,28 +298,35 @@
   <!-- Container div -->
   <div>
     <a href="https://sritikamanjrekar.github.io/ARNetExperince/">
-    <img src="logo.png" alt="ARNetExperince" style="width: 12%;margin-left: 2%;"></a>
+      <img src="logo.png" alt="ARNetExperince" style="width: 12%;margin-left: 2%;"></a>
     <div style="margin-left: 86%;margin-top: -3%;">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i class="ri-facebook-fill btn btn-outline-primary" style="border-radius: 50%;"></i></a>
-      <a href="https://twitter.com/intent/tweet?url=https://sritikamanjrekar.github.io/HTTP/&text=Check%20out%20this%20awesome%20website!" target="_blank"><i class="ri-twitter-fill  btn btn-outline-success" style="border-radius: 50%;margin-left: 3%;"></i></a>
-      <a href="https://www.linkedin.com/shareArticle?url=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i class="ri-linkedin-fill btn btn-outline-info" style="border-radius: 50%;margin-left: 3%;"></i></a>
-      <a href="" target="_blank"><i class="ri-instagram-line btn btn-outline-danger" style="border-radius: 50%;margin-left: 3%;"></i></a>
-     
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i
+          class="ri-facebook-fill btn btn-outline-primary" style="border-radius: 50%;"></i></a>
+      <a href="https://twitter.com/intent/tweet?url=https://sritikamanjrekar.github.io/HTTP/&text=Check%20out%20this%20awesome%20website!"
+        target="_blank"><i class="ri-twitter-fill  btn btn-outline-success"
+          style="border-radius: 50%;margin-left: 3%;"></i></a>
+      <a href="https://www.linkedin.com/shareArticle?url=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i
+          class="ri-linkedin-fill btn btn-outline-info" style="border-radius: 50%;margin-left: 3%;"></i></a>
+      <a href="" target="_blank"><i class="ri-instagram-line btn btn-outline-danger"
+          style="border-radius: 50%;margin-left: 3%;"></i></a>
+
     </div>
-    
+
     <!-- Center-aligned content using the deprecated <center> tag -->
     <center>
 
       <!-- Heading element with text "File Transfer Protocols" -->
-      
-      <h1 style="margin-top: -2%;"><b><span style="letter-spacing: 0.5cqmin;">Hypertext Transfer Protocol (HTTP)</span></b></h1>
+
+      <h1 style="margin-top: -2%;"><b><span style="letter-spacing: 0.5cqmin;color: #000f64;">Hypertext Transfer Protocol
+            (HTTP)</span></b></h1>
       <!-- Heading element -->
-      
-      
-      
+
+
+
 
       <button class="btn btn-outline-success btn-sm" onclick="openPdfPPT()">About HTTP</button>
-      &ensp;&ensp;<button class="btn btn-outline-primary btn-sm" onclick="openPdfDocs()">How To Use HTTP Document</button>
+      &ensp;&ensp;<button class="btn btn-outline-primary btn-sm" onclick="openPdfDocs()">How To Use HTTP
+        Document</button>
       &ensp;&ensp;<button class="btn btn-outline-danger btn-sm" onclick="openVideo()">How To Use HTTP Video</button>
 
 
@@ -231,15 +335,16 @@
     </center>
     <!-- End of center-aligned content -->
 
-   
-  
+
+
   </div>
   <!-- End of container div -->
 
-  <hr> <!-- Horizontal rule element -->
-
+  <!-- <hr> Horizontal rule element -->
+  <br>
 
   <div style="background-color:rgb(127, 206, 255);border-radius: 2%;margin: 0.3%;">
+
 
 
     <div class="model-viewer-container">
@@ -252,13 +357,15 @@
         <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
           data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
           data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-          data-bs-toggle="modal" data-bs-target="#PC-1IpAddress">
+          data-bs-toggle="modal" data-bs-target="#PC1Browser">
           <div class="HotspotAnnotation">PC-1</div>
         </button>
 
       </model-viewer>
 
     </div>
+
+
 
     <div class="connector" data-bs-toggle="modal" data-bs-target="#Connector"></div>
 
@@ -314,7 +421,7 @@
         <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
           data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
           data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-          data-bs-toggle="modal" data-bs-target="#PC-2IpAddress">
+          data-bs-toggle="modal" data-bs-target="#PC2Browser">
           <div class="HotspotAnnotation">PC-2</div>
         </button>
 
@@ -333,15 +440,84 @@
         <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
           data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
           data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-          data-bs-toggle="modal" data-bs-target="#PC-3IpAddress">
+          data-bs-toggle="modal" data-bs-target="#PC3Browser">
           <div class="HotspotAnnotation">PC-3</div>
         </button>
 
       </model-viewer>
 
     </div>
- 
-</div>
+
+    <div class="model-viewer-container">
+
+      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1"
+        style="width: 18%;z-index: 3;margin-left: -150%;margin-top: -135%;display: none; ">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+          data-bs-target="#Modal1">
+          <div class="HotspotAnnotation">Packet</div>
+        </button>
+      </model-viewer>
+
+    </div>
+
+
+    <div class="model-viewer-container">
+
+      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model2"
+        style="width: 18%;z-index: 3;margin-left: 30%;margin-top: -78%; display: none;">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+          data-bs-target="#Modal2">
+          <div class="HotspotAnnotation">Packet</div>
+        </button>
+      </model-viewer>
+
+    </div>
+
+    <div class="model-viewer-container">
+
+      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model3"
+        style="width: 18%;z-index: 3;margin-left: 45%;margin-top: -78%; display: none;">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+          data-bs-target="#Modal3">
+          <div class="HotspotAnnotation">Packet</div>
+        </button>
+      </model-viewer>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="modal1-1.jpeg" alt="OSI Details" width="45%">
+          <img src="modal1-2.jpeg" alt="PDU Details" width="45%">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -365,18 +541,118 @@
   </div>
 
 
+  <div class="modal fade" id="PC1Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-1 Browser</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            id="PC1BrowserCloseBtn1"></button>
+        </div>
+        <div class="modal-body">
+
+          <form>
+            <div class="mb-3">
+              <label for="ipaddressinput1" class="col-form-label">Enter URL:</label>
+              <input type="text" class="form-control" id="ipaddressinput1">
+            </div>
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-primary" data-bs-target="#PC-1IpAddress" data-bs-toggle="modal">More
+            Info</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            id="PC1BrowserCloseBtn2">Close</button>
+
+          <button type="button" class="btn btn-primary" onclick="checkAndShowPreview()">Enter</button>
+          <iframe id="preview_modal1"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="PC2Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-2 Browser</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            id="PC2BrowserCloseBtn1"></button>
+        </div>
+        <div class="modal-body">
+
+          <form>
+            <div class="mb-3">
+              <label for="ipaddressinput2" class="col-form-label">Enter URL:</label>
+              <input type="text" class="form-control" id="ipaddressinput2">
+            </div>
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-primary" data-bs-target="#PC-2IpAddress" data-bs-toggle="modal">More
+            Info</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            id="PC2BrowserCloseBtn2">Close</button>
+
+          <button type="button" class="btn btn-primary" onclick="checkAndShowPreview()">Enter</button>
+          <iframe id="preview_modal2"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="PC3Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-3 Browser</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            id="PC3BrowserCloseBtn1"></button>
+        </div>
+        <div class="modal-body">
+
+          <form>
+            <div class="mb-3">
+              <label for="ipaddressinput3" class="col-form-label">Enter URL:</label>
+              <input type="text" class="form-control" id="ipaddressinput3">
+            </div>
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-primary" data-bs-target="#PC-3IpAddress" data-bs-toggle="modal">More
+            Info</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            id="PC3BrowserCloseBtn2">Close</button>
+
+          <button type="button" class="btn btn-primary" onclick="checkAndShowPreview()">Enter</button>
+          <iframe id="preview_modal3"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
   <div class="modal fade" id="PC-1IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-1</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC1IPAdressCloseBtn"></button>
         </div>
         <div class="modal-body">
           IP Address > 192.168.11.1
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="PC1IPAdressBtn">Okay</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>
@@ -388,13 +664,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-2</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC2IPAdressCloseBtn"></button>
         </div>
         <div class="modal-body">
           IP Address > 192.168.11.2
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="PC2IPAdressBtn">Okay</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>
@@ -406,13 +682,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-3</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC3IPAdressCloseBtn"></button>
         </div>
         <div class="modal-body">
           IP Address > 192.168.11.3
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="PC3IPAdressBtn">Okay</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>
@@ -427,7 +703,29 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          IP Address > 192.168.11.4
+          Device Name > Server<br><br>
+          IP Address > 192.168.11.4<br><br>
+          MAC Address > 0001.4372.8CE6<br><br>
+          Cable Type > Fast Ethernet<br><br>
+          ARP Table > <br>
+          <table class="table table-danger table-hover table-bordered border-danger">
+            <thead>
+              <tr>
+                <th scope="col">IP Address</th>
+                <th scope="col">Hardware Address</th>
+                <th scope="col">Interface</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+                <td>192.168.11.2</td>
+                <td>000A.413C.D55E</td>
+                <td>Fast Ethernet</td>
+              </tr>
+
+            </tbody>
+          </table>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
@@ -482,12 +780,12 @@
   <div class="browser">
     <div class="address-bar">
       <span class="icon"></span>
-      <input type="text" class="address-input" placeholder="Enter URL">
+      <input type="text" class="address-input" placeholder="Enter URL" id="addressInput">
     </div>
     <iframe id="preview"></iframe>
   </div>
   <div class="code-editor">
-    <textarea id="html-code"></textarea>
+    <textarea id="html-code"><!-- Write your HTML, CSS, JS code here. Also you can try here JQuery, XML, AngularJS, Vue, W3.js--></textarea>
     <button class="btn btn-outline-primary" onclick="updatePreview()">Update</button>
   </div>
 
@@ -503,7 +801,331 @@
       preview.open();
       preview.write(htmlCode);
       preview.close();
+
+      // Save HTML content to localStorage
+      localStorage.setItem('savedHTML', htmlCode);
     }
+
+    
+
+    var matchFound = false;
+    function checkAndShowPreview() {
+      var ipAddressinput1 = document.getElementById('ipaddressinput1').value;
+      var ipAddressinput2 = document.getElementById('ipaddressinput2').value;
+      var ipAddressinput3 = document.getElementById('ipaddressinput3').value;
+      var addressInput = document.getElementById('addressInput').value;
+     
+      var htmlCode = document.getElementById('html-code').value;
+
+
+
+      if (ipAddressinput1 === addressInput) {
+        var previewIframe = document.getElementById('preview');
+        var previewModalIframe = document.getElementById('preview_modal1');
+
+        var previewModalDoc = previewModalIframe.contentDocument || previewModalIframe.contentWindow.document;
+        previewModalDoc.open();
+        previewModalDoc.write(htmlCode);
+        previewModalDoc.close();
+
+        // Save HTML content to localStorage
+        localStorage.setItem('savedHTML', htmlCode);
+
+        matchFound = true;
+
+
+
+      } 
+      
+      if (ipAddressinput2 === addressInput) {
+        var previewIframe = document.getElementById('preview');
+        var previewModalIframe = document.getElementById('preview_modal2');
+
+        var previewModalDoc = previewModalIframe.contentDocument || previewModalIframe.contentWindow.document;
+        previewModalDoc.open();
+        previewModalDoc.write(htmlCode);
+        previewModalDoc.close();
+
+        // Save HTML content to localStorage
+        localStorage.setItem('savedHTML', htmlCode);
+
+        matchFound = true;
+      } 
+      
+      if (ipAddressinput3 === addressInput) {
+        var previewIframe = document.getElementById('preview');
+        var previewModalIframe = document.getElementById('preview_modal3');
+
+        var previewModalDoc = previewModalIframe.contentDocument || previewModalIframe.contentWindow.document;
+        previewModalDoc.open();
+        previewModalDoc.write(htmlCode);
+        previewModalDoc.close();
+
+        // Save HTML content to localStorage
+        localStorage.setItem('savedHTML', htmlCode);
+
+        matchFound = true;
+
+
+      }
+
+      if (!matchFound) {
+        alert('IP address does not match the entered URL.');
+      }
+
+      //return matchFound;
+    }
+
+
+    // Event listener for the close button
+    document.getElementById('PC1BrowserCloseBtn1').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        triggerAnimationAndShowViewer();
+      }
+    });
+
+    document.getElementById('PC1BrowserCloseBtn2').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        triggerAnimationAndShowViewer();
+      }
+    });
+
+    // Event listener for the close button
+    document.getElementById('PC1IPAdressCloseBtn').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        triggerAnimationAndShowViewer();
+      }
+    });
+
+    // Event listener for the close button
+    document.getElementById('PC1IPAdressBtn').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        triggerAnimationAndShowViewer();
+      }
+    });
+
+
+
+    // Event listener for the close button
+    document.getElementById('PC2BrowserCloseBtn1').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        var modelViewer = document.getElementById('model2');
+        modelViewer.style.animation = 'moveUpRight 20s ease-in-out 3 forwards;';
+        modelViewer.style.display = 'block';
+        
+        // When the animation ends, hide the model-viewer element
+        modelViewer.addEventListener('animationend', function () {
+          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
+
+        modelViewer.style.display = 'none';
+        });
+      }
+    });
+
+    // Event listener for the close button
+    document.getElementById('PC2BrowserCloseBtn2').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        var modelViewer = document.getElementById('model2');
+        modelViewer.style.animation = 'moveUpRight 20s ease-in-out 3 forwards;';
+        modelViewer.style.display = 'block';
+       
+        // When the animation ends, hide the model-viewer element
+        modelViewer.addEventListener('animationend', function () {
+          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
+
+          modelViewer.style.display = 'none';
+        });
+      }
+    });
+
+    // Event listener for the close button
+    document.getElementById('PC3BrowserCloseBtn1').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        var modelViewer = document.getElementById('model3');
+        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
+        modelViewer.style.display = 'block';
+       
+        // When the animation ends, hide the model-viewer element
+        modelViewer.addEventListener('animationend', function () {
+          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
+
+          modelViewer.style.display = 'none';
+        });
+      }
+    });
+
+    // Event listener for the close button
+    document.getElementById('PC3BrowserCloseBtn2').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        var modelViewer = document.getElementById('model3');
+        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
+        modelViewer.style.display = 'block';
+       
+        // When the animation ends, hide the model-viewer element
+        modelViewer.addEventListener('animationend', function () {
+          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
+
+          modelViewer.style.display = 'none';
+        });
+      }
+    });
+
+    // Event listener for the close button
+    document.getElementById('PC2IPAdressCloseBtn').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        var modelViewer = document.getElementById('model3');
+        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
+        modelViewer.style.display = 'block';
+       
+        // When the animation ends, hide the model-viewer element
+        modelViewer.addEventListener('animationend', function () {
+          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
+
+          modelViewer.style.display = 'none';
+        });
+      }
+    });
+
+    // Event listener for the close button
+    document.getElementById('PC2IPAdressBtn').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        var modelViewer = document.getElementById('model3');
+        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
+        modelViewer.style.display = 'block';
+       
+        // When the animation ends, hide the model-viewer element
+        modelViewer.addEventListener('animationend', function () {
+          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
+
+          modelViewer.style.display = 'none';
+        });
+      }
+    });
+
+
+    // Event listener for the close button
+    document.getElementById('PC3IPAdressCloseBtn').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        var modelViewer = document.getElementById('model3');
+        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
+        modelViewer.style.display = 'block';
+       
+        // When the animation ends, hide the model-viewer element
+        modelViewer.addEventListener('animationend', function () {
+          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
+
+          modelViewer.style.display = 'none';
+        });
+      }
+    });
+
+    // Event listener for the close button
+    document.getElementById('PC3IPAdressBtn').addEventListener('click', function () {
+      // Check if matchFound is true
+      if (matchFound) {
+        var modelViewer = document.getElementById('model3');
+        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
+        modelViewer.style.display = 'block';
+       
+        // When the animation ends, hide the model-viewer element
+        modelViewer.addEventListener('animationend', function () {
+          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
+
+          modelViewer.style.display = 'none';
+        });
+      }
+    });
+
+
+
+    // Function to trigger animation and show model-viewer
+    function triggerAnimationAndShowViewer() {
+      var modelViewer = document.getElementById('model1');
+      modelViewer.style.animation = 'moveRight 20s linear 3';
+      modelViewer.style.display = 'block';
+     
+      // When the animation ends, hide the model-viewer element
+      modelViewer.addEventListener('animationend', function () {
+        alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
+
+        modelViewer.style.display = 'none';
+      });
+    }
+
+
+
+
+    // function checkAndShowPreview() {
+    //   var ipAddressinput1 = document.getElementById('ipaddressinput1').value;
+    //   var ipAddressinput2 = document.getElementById('ipaddressinput2').value;
+
+    //   var ipAddressinput3 = document.getElementById('ipaddressinput3').value;
+
+    //   var addressInput = document.getElementById('addressInput').value;
+    //   var htmlCode = document.getElementById('html-code').value;
+
+    //   // Check if the IP address matches the address input
+    //   if (ipAddressinput1 === addressInput) {
+    //     var previewIframe = document.getElementById('preview');
+    //     var previewModalIframe1 = document.getElementById('preview_modal1');
+
+
+
+
+
+    //     // Update the content of the preview_modal iframe
+    //     var previewModalDoc1 = previewModalIframe1.contentDocument || previewModalIframe1.contentWindow.document;
+    //     previewModalDoc1.open();
+    //     previewModalDoc1.write(htmlCode);
+    //     previewModalDoc1.close();
+
+
+
+    //     // Save HTML content to localStorage
+    //     localStorage.setItem('savedHTML', htmlCode);
+    //   }
+    //   else if (ipAddressinput2 === addressInput) {
+    //     var previewIframe = document.getElementById('preview');
+    //     var previewModalIframe2 = document.getElementById('preview_modal2');
+
+    //     var previewModalDoc2 = previewModalIframe2.contentDocument || previewModalIframe2.contentWindow.document;
+    //     previewModalDoc2.open();
+    //     previewModalDoc2.write(htmlCode);
+    //     previewModalDoc2.close();
+
+    //     // Save HTML content to localStorage
+    //     localStorage.setItem('savedHTML', htmlCode);
+
+    //   } else if (ipAddressinput3 === addressInput) {
+
+    //     var previewIframe = document.getElementById('preview');
+    //     var previewModalIframe3 = document.getElementById('preview_modal3');
+
+    //     var previewModalDoc3 = previewModalIframe3.contentDocument || previewModalIframe3.contentWindow.document;
+    //     previewModalDoc3.open();
+    //     previewModalDoc3.write(htmlCode);
+    //     previewModalDoc3.close();
+
+    //     // Save HTML content to localStorage
+    //     localStorage.setItem('savedHTML', htmlCode);
+    //   }
+
+    //   else {
+    //     alert('IP address does not match the entered URL.');
+    //   }
+    // }
+
 
 
 
