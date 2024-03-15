@@ -1,1161 +1,351 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 
 <head>
-  <title>Hypertext Transfer Protocol (HTTP)</title>
-  <meta charset="utf-8">
-  <meta name="description" content="&lt;model-viewer&gt; template">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-  <link type="text/css" href="./styles.css" rel="stylesheet" />
-
-
-  <style>
-    .connector {
-      /* Set the width of the connector element */
-      width: 18.7%;
-      /* Full width for the horizontal line */
-
-      /* Set the height of the connector line */
-      height: 4px;
-      /* Adjust the height of the connector line */
-
-      /* Set the background color of the connector line */
-      background-color: blue;
-      /* Adjust the color as needed */
-
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
-
-      /* Set the left margin to position the connector horizontally */
-      margin-left: 21.4%;
-      /* Adjust the left margin as needed */
-
-      /* Set the top position to separate it from the models */
-      top: 41.7%;
-      /* Adjust the top position as needed */
-
-      /* Set the z-index to 1 for layering, ensuring it appears above other elements */
-      z-index: 1;
-      /* Adjust the z-index as needed */
-    }
-
-    .connector1 {
-      /* Set the width of the connector element */
-      width: 23.7%;
-      /* Full width for the horizontal line */
-
-      /* Set the height of the connector line */
-      height: 4px;
-      /* Adjust the height of the connector line */
-
-      /* Set the background color of the connector line */
-      background-color: red;
-      /* Adjust the color as needed */
-
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
-
-      /* Set the left margin to position the connector horizontally */
-      margin-left: 52%;
-      /* Adjust the left margin as needed */
-
-      /* Set the top position to separate it from the models */
-      top: 42.7%;
-      /* Adjust the top position as needed */
-
-      /* Set the z-index to 1 for layering, ensuring it appears above other elements */
-      z-index: 1;
-      /* Adjust the z-index as needed */
-    }
-
-    .vertical-line {
-      /* Set the height of the vertical line */
-      height: 315px;
-      /* Adjust the height as needed */
-
-
-      /* Set the left margin to position the vertical line to the left side */
-      margin-left: 48%;
-      /* Adjust the left margin as needed */
-
-      /* Set the top margin to position the vertical line up from the top */
-      margin-top: -8.9%;
-      /* Adjust the top margin as needed */
-
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
-      /* Adjust the margin as needed */
-
-      /* Change the color of the dashed border */
-      border-color: green;
-      /* Adjust the border color as needed */
-
-      /* Define the border style as dashed */
-      border-style: solid;
-
-      z-index: 0;
-
-    }
-
-    .salnted-line {
-      /* Set the height of the vertical line */
-      height: 500px;
-      /* Adjust the height as needed */
-
-      transform: rotate(60deg);
-      /* Set the left margin to position the vertical line to the left side */
-      margin-left: 28%;
-      /* Adjust the left margin as needed */
-
-      /* Set the top margin to position the vertical line up from the top */
-      margin-top: -17.3%;
-      /* Adjust the top margin as needed */
-
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
-      /* Adjust the margin as needed */
-
-      /* Change the color of the dashed border */
-      border-color: purple;
-      /* Adjust the border color as needed */
-
-      /* Define the border style as dashed */
-      border-style: solid;
-
-      z-index: 0;
-
-    }
-
-
-    .browser {
-      width: 800px;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-
-    .address-bar {
-      background-color: #f0f0f0;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    .address-bar .icon {
-      width: 20px;
-      height: 20px;
-      background-image: url('browser-icon.png');
-      /* replace with your icon */
-      background-size: cover;
-    }
-
-    .address-bar input[type="text"] {
-      flex: 1;
-      margin-left: 10px;
-      padding: 5px;
-      border-radius: 3px;
-      border: 1px solid #ccc;
-    }
-
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-    }
-
-    .code-editor {
-      width: 800px;
-      margin: 20px auto;
-    }
-
-    textarea {
-      width: 100%;
-      height: 300px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      font-family: inherit;
-    }
-
-    /* Define animation */
-    @keyframes colorChange {
-      0% {
-        color: #000f64;
-      }
-
-      50% {
-        color: #00b3ff;
-      }
-
-      100% {
-        color: #000f64;
-      }
-    }
-
-    /* Apply animation to the span */
-    h1 span:hover {
-      animation: colorChange 5s infinite;
-    }
-
-
-    @keyframes moveRight {
-      0% {
-        transform: translateX(0);
-      }
-
-      50% {
-        transform: translateX(1000%);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    /* .model-viewer-animation {
-      animation: moveRight 180000s linear 2;
-      /* Increased duration to 180000s (50 hours) */
-    /* } */
-
-    @keyframes moveUpRight {
-      0% {
-        transform: translateY(0) translateX(0);
-      }
-
-      20% {
-        transform: translateY(-38vh) translateX(35vw);
-      }
-
-      40% {
-        transform: translateY(-38vh) translateX(67vw);
-      }
-
-      60% {
-        transform: translateY(-38vh) translateX(35vw);
-      }
-
-      100% {
-        transform: translateY(0) translateX(0);
-      }
-
-
-
-
-    }
-
-    @keyframes moveUpRightStraight {
-      0% {
-        transform: translateY(0) translateX(0);
-      }
-
-      20% {
-        transform: translateY(-38vh) translateX(0);
-      }
-
-      40% {
-        transform: translateY(-38vh) translateX(29vw);
-      }
-
-      60% {
-        transform: translateY(-38vh) translateX(0vw);
-      }
-
-      100% {
-        transform: translateY(0) translateX(0);
-      }
-
-
-
-
-    }
-
-
-
-    #model2 {
-      animation: moveUpRight 20s ease-in-out 3 forwards;
-    }
-
-    #model3 {
-      animation: moveUpRightStraight 20s ease-in-out 3 forwards;
-    }
-  </style>
-
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ARNetExperience</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="ARNetExperience Website" />
+	<meta name="keywords" content="computer network, ar, cn, augmented reality, ftp, smtp, http, rarp, arp" />
+	<meta name="author" content="Pratishtha Tamore, Kajal Tiwari, Sritika Manjrekar" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
 </head>
 
 <body>
 
-  <!-- Inserts a line break (not visible on the page) -->
-  <!-- Start of HTML Document -->
-
-  <br> <!-- Line break element -->
-
-  <!-- Container div -->
-  <div>
-    <a href="https://sritikamanjrekar.github.io/ARNetExperince/">
-      <img src="logo.png" alt="ARNetExperince" style="width: 12%;margin-left: 2%;"></a>
-    <div style="margin-left: 86%;margin-top: -3%;">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i
-          class="ri-facebook-fill btn btn-outline-primary" style="border-radius: 50%;"></i></a>
-      <a href="https://twitter.com/intent/tweet?url=https://sritikamanjrekar.github.io/HTTP/&text=Check%20out%20this%20awesome%20website!"
-        target="_blank"><i class="ri-twitter-fill  btn btn-outline-success"
-          style="border-radius: 50%;margin-left: 3%;"></i></a>
-      <a href="https://www.linkedin.com/shareArticle?url=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i
-          class="ri-linkedin-fill btn btn-outline-info" style="border-radius: 50%;margin-left: 3%;"></i></a>
-      <a href="" target="_blank"><i class="ri-instagram-line btn btn-outline-danger"
-          style="border-radius: 50%;margin-left: 3%;"></i></a>
-
-    </div>
-
-    <!-- Center-aligned content using the deprecated <center> tag -->
-    <center>
-
-      <!-- Heading element with text "File Transfer Protocols" -->
-
-      <h1 style="margin-top: -2%;"><b><span style="letter-spacing: 0.5cqmin;color: #000f64;">Hypertext Transfer Protocol
-            (HTTP)</span></b></h1>
-      <!-- Heading element -->
-
-
-
-
-      <button class="btn btn-outline-success btn-sm" onclick="openPdfPPT()">About HTTP</button>
-      &ensp;&ensp;<button class="btn btn-outline-primary btn-sm" onclick="openPdfDocs()">How To Use HTTP
-        Document</button>
-      &ensp;&ensp;<button class="btn btn-outline-danger btn-sm" onclick="openVideo()">How To Use HTTP Video</button>
-
-
-      <br> <!-- Line break element -->
-
-    </center>
-    <!-- End of center-aligned content -->
-
-
-
-  </div>
-  <!-- End of container div -->
-
-  <!-- <hr> Horizontal rule element -->
-  <br>
-
-  <div style="background-color:rgb(127, 206, 255);border-radius: 2%;margin: 0.3%;">
-
-
-
-    <div class="model-viewer-container">
-
-
-
-      <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
-        style="z-index: 2;">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
-          data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
-          data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-          data-bs-toggle="modal" data-bs-target="#PC1Browser">
-          <div class="HotspotAnnotation">PC-1</div>
-        </button>
-
-      </model-viewer>
-
-    </div>
-
-
-
-    <div class="connector" data-bs-toggle="modal" data-bs-target="#Connector"></div>
-
-    <div class="model-viewer-container">
-
-
-
-      <model-viewer src="switch.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
-        shadow-intensity="1" style="">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
-          data-position="-17.82355475016235m 6.123874902725213m -167.32013377219792m" data-normal="0m 1m 0m"
-          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Switch">
-          <div class="HotspotAnnotation">Switch</div>
-        </button>
-
-
-      </model-viewer>
-
-    </div>
-
-
-
-    <div class="connector1" data-bs-toggle="modal" data-bs-target="#Connector"></div>
-
-
-    <div class="model-viewer-container">
-      <model-viewer src="server_racking_system.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        poster="poster.webp" shadow-intensity="1" style="z-index: 2;">
-
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-3"
-          data-position="-0.2986763782425904m 1.905029363515141m 0.5064332606660245m"
-          data-normal="0m 0.4745439042365091m 0.8802318347753455m" data-visibility-attribute="visible"
-          data-bs-toggle="modal" data-bs-target="#ServerIpAddress">
-          <div class="HotspotAnnotation">Server</div>
-        </button>
-
-      </model-viewer>
-
-
-    </div>
-
-    <div class="vertical-line" data-bs-toggle="modal" data-bs-target="#Connector"></div>
-    <div class="salnted-line" data-bs-toggle="modal" data-bs-target="#Connector"></div>
-
-
-
-    <div class="model-viewer-container">
-
-
-
-      <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1" style="">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
-          data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
-          data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-          data-bs-toggle="modal" data-bs-target="#PC2Browser">
-          <div class="HotspotAnnotation">PC-2</div>
-        </button>
-
-      </model-viewer>
-
-    </div>
-
-
-
-
-    <div class="model-viewer-container">
-
-
-      <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1" style="">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
-          data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
-          data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-          data-bs-toggle="modal" data-bs-target="#PC3Browser">
-          <div class="HotspotAnnotation">PC-3</div>
-        </button>
-
-      </model-viewer>
-
-    </div>
-
-    <div class="model-viewer-container">
-
-      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1"
-        style="width: 18%;z-index: 3;margin-left: -150%;margin-top: -135%;display: none; ">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
-          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
-          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
-          data-bs-target="#Modal1">
-          <div class="HotspotAnnotation">Packet</div>
-        </button>
-      </model-viewer>
-
-    </div>
-
-
-    <div class="model-viewer-container">
-
-      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model2"
-        style="width: 18%;z-index: 3;margin-left: 30%;margin-top: -78%; display: none;">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
-          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
-          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
-          data-bs-target="#Modal2">
-          <div class="HotspotAnnotation">Packet</div>
-        </button>
-      </model-viewer>
-
-    </div>
-
-    <div class="model-viewer-container">
-
-      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model3"
-        style="width: 18%;z-index: 3;margin-left: 45%;margin-top: -78%; display: none;">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
-          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
-          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
-          data-bs-target="#Modal3">
-          <div class="HotspotAnnotation">Packet</div>
-        </button>
-      </model-viewer>
-
-    </div>
-
-
-  </div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="modal1-1.jpeg" alt="OSI Details" width="45%">
-          <img src="modal1-2.jpeg" alt="PDU Details" width="45%">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Switch 2950-24</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-
-          <img src="switch295-24.PNG" alt="switch2950-24">
-          <img src="switch.jpg" alt="switch2950-24">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="modal fade" id="PC1Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-1 Browser</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-            id="PC1BrowserCloseBtn1"></button>
-        </div>
-        <div class="modal-body">
-
-          <form>
-            <div class="mb-3">
-              <label for="ipaddressinput1" class="col-form-label">Enter URL:</label>
-              <input type="text" class="form-control" id="ipaddressinput1">
-            </div>
-
-          </form>
-
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-primary" data-bs-target="#PC-1IpAddress" data-bs-toggle="modal">More
-            Info</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-            id="PC1BrowserCloseBtn2">Close</button>
-
-          <button type="button" class="btn btn-primary" onclick="checkAndShowPreview()">Enter</button>
-          <iframe id="preview_modal1"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="PC2Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-2 Browser</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-            id="PC2BrowserCloseBtn1"></button>
-        </div>
-        <div class="modal-body">
-
-          <form>
-            <div class="mb-3">
-              <label for="ipaddressinput2" class="col-form-label">Enter URL:</label>
-              <input type="text" class="form-control" id="ipaddressinput2">
-            </div>
-
-          </form>
-
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-primary" data-bs-target="#PC-2IpAddress" data-bs-toggle="modal">More
-            Info</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-            id="PC2BrowserCloseBtn2">Close</button>
-
-          <button type="button" class="btn btn-primary" onclick="checkAndShowPreview()">Enter</button>
-          <iframe id="preview_modal2"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="PC3Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-3 Browser</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-            id="PC3BrowserCloseBtn1"></button>
-        </div>
-        <div class="modal-body">
-
-          <form>
-            <div class="mb-3">
-              <label for="ipaddressinput3" class="col-form-label">Enter URL:</label>
-              <input type="text" class="form-control" id="ipaddressinput3">
-            </div>
-
-          </form>
-
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-primary" data-bs-target="#PC-3IpAddress" data-bs-toggle="modal">More
-            Info</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-            id="PC3BrowserCloseBtn2">Close</button>
-
-          <button type="button" class="btn btn-primary" onclick="checkAndShowPreview()">Enter</button>
-          <iframe id="preview_modal3"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="modal fade" id="PC-1IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-1</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC1IPAdressCloseBtn"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.1
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="PC1IPAdressBtn">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="PC-2IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-2</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC2IPAdressCloseBtn"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.2
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="PC2IPAdressBtn">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="PC-3IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-3</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC3IPAdressCloseBtn"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.3
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="PC3IPAdressBtn">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="ServerIpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Server</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          Device Name > Server<br><br>
-          IP Address > 192.168.11.4<br><br>
-          MAC Address > 0001.4372.8CE6<br><br>
-          Cable Type > Fast Ethernet<br><br>
-          ARP Table > <br>
-          <table class="table table-danger table-hover table-bordered border-danger">
-            <thead>
-              <tr>
-                <th scope="col">IP Address</th>
-                <th scope="col">Hardware Address</th>
-                <th scope="col">Interface</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-
-                <td>192.168.11.2</td>
-                <td>000A.413C.D55E</td>
-                <td>Fast Ethernet</td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="Connector" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Fast Ethernet 0/1 RS-232 Wire</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-
-          <img src="rs232.jpg" alt="RS 232">
-          <img src="pinrs232.jpg" alt="Pin number of RS-232">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Switch 2950-24</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-
-          <img src="switch295-24.PNG" alt="switch2950-24">
-          <img src="switch.jpg" alt="switch2950-24">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="browser">
-    <div class="address-bar">
-      <span class="icon"></span>
-      <input type="text" class="address-input" placeholder="Enter URL" id="addressInput">
-    </div>
-    <iframe id="preview"></iframe>
-  </div>
-  <div class="code-editor">
-    <textarea id="html-code"><!-- Write your HTML, CSS, JS code here. Also you can try here JQuery, XML, AngularJS, Vue, W3.js--></textarea>
-    <button class="btn btn-outline-primary" onclick="updatePreview()">Update</button>
-  </div>
-
-
-  <script>
-
-
-
-    function updatePreview() {
-      var htmlCode = document.getElementById('html-code').value;
-      var previewFrame = document.getElementById('preview');
-      var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
-      preview.open();
-      preview.write(htmlCode);
-      preview.close();
-
-      // Save HTML content to localStorage
-      localStorage.setItem('savedHTML', htmlCode);
-    }
-
-    
-
-    var matchFound = false;
-    function checkAndShowPreview() {
-      var ipAddressinput1 = document.getElementById('ipaddressinput1').value;
-      var ipAddressinput2 = document.getElementById('ipaddressinput2').value;
-      var ipAddressinput3 = document.getElementById('ipaddressinput3').value;
-      var addressInput = document.getElementById('addressInput').value;
-     
-      var htmlCode = document.getElementById('html-code').value;
-
-
-
-      if (ipAddressinput1 === addressInput) {
-        var previewIframe = document.getElementById('preview');
-        var previewModalIframe = document.getElementById('preview_modal1');
-
-        var previewModalDoc = previewModalIframe.contentDocument || previewModalIframe.contentWindow.document;
-        previewModalDoc.open();
-        previewModalDoc.write(htmlCode);
-        previewModalDoc.close();
-
-        // Save HTML content to localStorage
-        localStorage.setItem('savedHTML', htmlCode);
-
-        matchFound = true;
-
-
-
-      } 
-      
-      if (ipAddressinput2 === addressInput) {
-        var previewIframe = document.getElementById('preview');
-        var previewModalIframe = document.getElementById('preview_modal2');
-
-        var previewModalDoc = previewModalIframe.contentDocument || previewModalIframe.contentWindow.document;
-        previewModalDoc.open();
-        previewModalDoc.write(htmlCode);
-        previewModalDoc.close();
-
-        // Save HTML content to localStorage
-        localStorage.setItem('savedHTML', htmlCode);
-
-        matchFound = true;
-      } 
-      
-      if (ipAddressinput3 === addressInput) {
-        var previewIframe = document.getElementById('preview');
-        var previewModalIframe = document.getElementById('preview_modal3');
-
-        var previewModalDoc = previewModalIframe.contentDocument || previewModalIframe.contentWindow.document;
-        previewModalDoc.open();
-        previewModalDoc.write(htmlCode);
-        previewModalDoc.close();
-
-        // Save HTML content to localStorage
-        localStorage.setItem('savedHTML', htmlCode);
-
-        matchFound = true;
-
-
-      }
-
-      if (!matchFound) {
-        alert('IP address does not match the entered URL.');
-      }
-
-      //return matchFound;
-    }
-
-
-    // Event listener for the close button
-    document.getElementById('PC1BrowserCloseBtn1').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        triggerAnimationAndShowViewer();
-      }
-    });
-
-    document.getElementById('PC1BrowserCloseBtn2').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        triggerAnimationAndShowViewer();
-      }
-    });
-
-    // Event listener for the close button
-    document.getElementById('PC1IPAdressCloseBtn').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        triggerAnimationAndShowViewer();
-      }
-    });
-
-    // Event listener for the close button
-    document.getElementById('PC1IPAdressBtn').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        triggerAnimationAndShowViewer();
-      }
-    });
-
-
-
-    // Event listener for the close button
-    document.getElementById('PC2BrowserCloseBtn1').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        var modelViewer = document.getElementById('model2');
-        modelViewer.style.animation = 'moveUpRight 20s ease-in-out 3 forwards;';
-        modelViewer.style.display = 'block';
-        
-        // When the animation ends, hide the model-viewer element
-        modelViewer.addEventListener('animationend', function () {
-          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
-
-        modelViewer.style.display = 'none';
-        });
-      }
-    });
-
-    // Event listener for the close button
-    document.getElementById('PC2BrowserCloseBtn2').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        var modelViewer = document.getElementById('model2');
-        modelViewer.style.animation = 'moveUpRight 20s ease-in-out 3 forwards;';
-        modelViewer.style.display = 'block';
-       
-        // When the animation ends, hide the model-viewer element
-        modelViewer.addEventListener('animationend', function () {
-          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
-
-          modelViewer.style.display = 'none';
-        });
-      }
-    });
-
-    // Event listener for the close button
-    document.getElementById('PC3BrowserCloseBtn1').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        var modelViewer = document.getElementById('model3');
-        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
-        modelViewer.style.display = 'block';
-       
-        // When the animation ends, hide the model-viewer element
-        modelViewer.addEventListener('animationend', function () {
-          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
-
-          modelViewer.style.display = 'none';
-        });
-      }
-    });
-
-    // Event listener for the close button
-    document.getElementById('PC3BrowserCloseBtn2').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        var modelViewer = document.getElementById('model3');
-        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
-        modelViewer.style.display = 'block';
-       
-        // When the animation ends, hide the model-viewer element
-        modelViewer.addEventListener('animationend', function () {
-          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
-
-          modelViewer.style.display = 'none';
-        });
-      }
-    });
-
-    // Event listener for the close button
-    document.getElementById('PC2IPAdressCloseBtn').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        var modelViewer = document.getElementById('model3');
-        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
-        modelViewer.style.display = 'block';
-       
-        // When the animation ends, hide the model-viewer element
-        modelViewer.addEventListener('animationend', function () {
-          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
-
-          modelViewer.style.display = 'none';
-        });
-      }
-    });
-
-    // Event listener for the close button
-    document.getElementById('PC2IPAdressBtn').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        var modelViewer = document.getElementById('model3');
-        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
-        modelViewer.style.display = 'block';
-       
-        // When the animation ends, hide the model-viewer element
-        modelViewer.addEventListener('animationend', function () {
-          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
-
-          modelViewer.style.display = 'none';
-        });
-      }
-    });
-
-
-    // Event listener for the close button
-    document.getElementById('PC3IPAdressCloseBtn').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        var modelViewer = document.getElementById('model3');
-        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
-        modelViewer.style.display = 'block';
-       
-        // When the animation ends, hide the model-viewer element
-        modelViewer.addEventListener('animationend', function () {
-          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
-
-          modelViewer.style.display = 'none';
-        });
-      }
-    });
-
-    // Event listener for the close button
-    document.getElementById('PC3IPAdressBtn').addEventListener('click', function () {
-      // Check if matchFound is true
-      if (matchFound) {
-        var modelViewer = document.getElementById('model3');
-        modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
-        modelViewer.style.display = 'block';
-       
-        // When the animation ends, hide the model-viewer element
-        modelViewer.addEventListener('animationend', function () {
-          alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
-
-          modelViewer.style.display = 'none';
-        });
-      }
-    });
-
-
-
-    // Function to trigger animation and show model-viewer
-    function triggerAnimationAndShowViewer() {
-      var modelViewer = document.getElementById('model1');
-      modelViewer.style.animation = 'moveRight 20s linear 3';
-      modelViewer.style.display = 'block';
-     
-      // When the animation ends, hide the model-viewer element
-      modelViewer.addEventListener('animationend', function () {
-        alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
-
-        modelViewer.style.display = 'none';
-      });
-    }
-
-
-
-
-    // function checkAndShowPreview() {
-    //   var ipAddressinput1 = document.getElementById('ipaddressinput1').value;
-    //   var ipAddressinput2 = document.getElementById('ipaddressinput2').value;
-
-    //   var ipAddressinput3 = document.getElementById('ipaddressinput3').value;
-
-    //   var addressInput = document.getElementById('addressInput').value;
-    //   var htmlCode = document.getElementById('html-code').value;
-
-    //   // Check if the IP address matches the address input
-    //   if (ipAddressinput1 === addressInput) {
-    //     var previewIframe = document.getElementById('preview');
-    //     var previewModalIframe1 = document.getElementById('preview_modal1');
-
-
-
-
-
-    //     // Update the content of the preview_modal iframe
-    //     var previewModalDoc1 = previewModalIframe1.contentDocument || previewModalIframe1.contentWindow.document;
-    //     previewModalDoc1.open();
-    //     previewModalDoc1.write(htmlCode);
-    //     previewModalDoc1.close();
-
-
-
-    //     // Save HTML content to localStorage
-    //     localStorage.setItem('savedHTML', htmlCode);
-    //   }
-    //   else if (ipAddressinput2 === addressInput) {
-    //     var previewIframe = document.getElementById('preview');
-    //     var previewModalIframe2 = document.getElementById('preview_modal2');
-
-    //     var previewModalDoc2 = previewModalIframe2.contentDocument || previewModalIframe2.contentWindow.document;
-    //     previewModalDoc2.open();
-    //     previewModalDoc2.write(htmlCode);
-    //     previewModalDoc2.close();
-
-    //     // Save HTML content to localStorage
-    //     localStorage.setItem('savedHTML', htmlCode);
-
-    //   } else if (ipAddressinput3 === addressInput) {
-
-    //     var previewIframe = document.getElementById('preview');
-    //     var previewModalIframe3 = document.getElementById('preview_modal3');
-
-    //     var previewModalDoc3 = previewModalIframe3.contentDocument || previewModalIframe3.contentWindow.document;
-    //     previewModalDoc3.open();
-    //     previewModalDoc3.write(htmlCode);
-    //     previewModalDoc3.close();
-
-    //     // Save HTML content to localStorage
-    //     localStorage.setItem('savedHTML', htmlCode);
-    //   }
-
-    //   else {
-    //     alert('IP address does not match the entered URL.');
-    //   }
-    // }
-
-
-
-
-    function openPdfPPT() {
-      window.open('openPdfPPT.html', '_blank');
-    }
-
-    function openPdfDocs() {
-      window.open('openPdfDocs.html', '_blank');
-    }
-  </script>
-
-
-
-
-
-  <!-- Loads <model-viewer> for browsers: -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
-
-  <!-- Includes a JavaScript module for 3D model viewing -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-  <!-- Includes the Bootstrap JavaScript library from a CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
-
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+		<nav class="fh5co-nav" role="navigation">
+			<!-- <div class="top-menu"> -->
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-center logo-wrap">
+						<div id="fh5co-logo"><a href="index.html"><img src="image.png" alt="logo"
+									width="21%" /><span></span></a></div>
+					</div>
+					<div class="col-xs-12 text-center menu-1 menu-wrap">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<!-- <li><a href="menu.html">Menu</a></li> -->
+							<!-- <li class="has-dropdown">
+								<a href="gallery.html">Gallery</a>
+								<ul class="dropdown">
+									<li><a href="#">Events</a></li>
+									<li><a href="#">Food</a></li>
+									<li><a href="#">Coffees</a></li>
+								</ul>
+							</li> -->
+
+							<li><a href="#fh5co-about">About</a></li>
+							<li><a href="learning.html">Start Learning</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<!-- </div> -->
+		</nav>
+
+		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
+			style="background-image: url(holder.png); " data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="display-t js-fullheight">
+							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+								<h1>Step into the Future of Learning with ARNetExperience</h1>
+								<h2>Explore Computer Networks like Never Before! Immerse yourself in interactive
+									simulations, dissect packet details, and access rich resources. Your gateway to
+									mastering network topics awaits!</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="fh5co-about" class="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
+						<img src="holder2.jpg" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+					</div>
+					<div class="col-md-5 col-md-push-1 animate-box">
+						<div class="section-heading">
+							<h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+								About ARNetExperience: Revolutionizing Learning through Web AR</h2>
+							<p style="color: white;">Welcome to ARNetExperience, where we're reshaping the landscape of
+								education through cutting-edge Web AR technology. At ARNetExperience, we believe in the
+								power of innovation to transform learning experiences, and we're dedicated to providing
+								students with an unparalleled journey into the world of Computer Networks.</p>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="fh5co-featured-menu" class="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 fh5co-heading animate-box">
+						<h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 40px;">Our Mission
+						</h2>
+						<div class="row">
+							<div class="col-md-11">
+								<p style="color: white;font-size: 20px;">At the core of ARNetExperience lies a singular mission: to make
+									learning engaging, interactive, and accessible to all. We're committed to
+									democratizing education by leveraging Augmented Reality to bring complex concepts to
+									life, empowering students to grasp the intricacies of Computer Networks with ease
+									and excitement.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+						<div class="fh5co-item">
+							<img src="about1.PNG" class="img-responsive" alt="">
+							<h3>What Sets </h3>
+							<span class="fh5co-price">Us Apart</span>
+							<p style="color: white;">Unlike traditional learning methods, ARNetExperience offers a
+								dynamic, immersive approach to studying Computer Networks. Through our innovative Web AR
+								platform, students can visualize abstract concepts, interact with simulations, and delve
+								into packet details in real-time. Our comprehensive resources complement these
+								experiences, providing learners with the tools they need to succeed.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+						<div class="fh5co-item margin_top">
+							<img src="about2.PNG" class="img-responsive"
+								alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+							<h3>Our</h3>
+							<span class="fh5co-price">Team</span>
+							<p style="color: white;">Behind ARNetExperience is a team of passionate educators,
+								developers, and designers dedicated to pushing the boundaries of educational technology.
+								With a wealth of expertise in both education and technology, our team works tirelessly
+								to create innovative solutions that empower students to excel in their studies.</p>
+						</div>
+					</div>
+					<div class="clearfix visible-sm-block visible-xs-block"></div>
+					<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+						<div class="fh5co-item">
+							<img src="about4.PNG.crdownload" class="img-responsive" alt="">
+							<h3>Join</h3>
+							<span class="fh5co-price">Us</span>
+							<p style="color: white;">Embark on an unforgettable learning adventure with ARNetExperience.
+								Whether you're a student eager to explore the world of Computer Networks or an educator
+								seeking to enhance your teaching methods, we invite you to join us on this exciting
+								journey. Together, let's revolutionize the way we learn and inspire the next generation
+								of innovators.</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+						<div class="fh5co-item margin_top">
+							<img src="about3.PNG" class="img-responsive" alt="">
+							<h3>Personalized</h3>
+							<span class="fh5co-price">Learning</span>
+							<p style="color: white;">At ARNetExperience, we understand that every learner is unique.
+								That's why our platform offers personalized learning experiences tailored to individual
+								needs and preferences. Whether you're a visual learner who thrives on interactive
+								simulations or a textual learner who prefers in-depth articles, ARNetExperience adapts
+								to your learning style, ensuring maximum comprehension and retention. Join us and unlock
+								the power of personalized learning to achieve your academic goals like never before.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="fh5co-featured-testimony" class="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 fh5co-heading animate-box">
+						<h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Why Choose
+							ARNetExperience</h2>
+						<div class="row">
+							<div class="">
+
+								<ul style="color: white;font-size: 20px;">
+									<li>Interactive Learning: Dive deep into the world of Computer Networks through
+										hands-on AR simulations.
+									</li>
+									<li> Real-time Insights: Gain valuable insights by exploring packet details and
+										network structures in real-time.</li>
+									<li>Accessible Resources: Access a wealth of resources including articles, videos,
+										and quizzes to enhance your understanding.</li>
+									<li>Innovative Technology: Stay ahead of the curve with our cutting-edge Web AR
+										platform, designed for seamless integration into your learning journey.</li>
+									<li>Community Engagement: Join a vibrant community of learners, educators, and
+										industry experts to share knowledge and collaborate on projects.</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(learning.jpg);"
+			data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Start
+							Learning</h2>
+						<p>
+
+							Embark on your journey to mastering Computer Networks with ARNetExperience. Dive into our
+							immersive Web AR simulations, explore packet details in real-time, and access a wealth of
+							resources to enhance your understanding. Whether you're a novice eager to learn or a
+							seasoned professional seeking to expand your knowledge, ARNetExperience is your gateway to a
+							world of discovery. Join us today and unlock the potential of interactive learning like
+							never before.</p>
+						<p><a href="learning.html" class="btn btn-primary btn-outline">Start</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-4 fh5co-widget">
+						<!-- <h4 style="color: #ffffff;">ARNetExperience</h4> -->
+						<a href="https://sritikamanjrekar.github.io/ARNetExperience/"><img src="image.png" alt="" width="60%"></a>
+						<br><br>
+						<p style="color: #ffffff;">Step into the Future of Learning with ARNetExperience | Explore Computer Networks like Never
+							Before!</p>
+					</div>
+					<div class="col-md-2 col-md-push-1 fh5co-widget">
+						<h4>Links</h4>
+						<ul class="fh5co-footer-links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#fh5co-about">About</a></li>
+							<li><a href="learning.html">Start Learning</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+
+					
+
+					<div class="col-md-4 col-md-push-1 fh5co-widget">
+						<h4>Contact Information</h4>
+						<ul class="fh5co-footer-links">
+							<!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
+							<!-- <li><a href="tel://1234567920">+ 1235 2355 98</a></li> -->
+							<li><a href="mailto:arnetexperience20@gmail.com
+								">arnetexperience20@gmail.com
+							</a></li>
+							
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="row copyright">
+					<div class="col-md-12 text-center">
+						<p>
+							<small class="block" style="color: #ffffff;">© 2024 ARNetExperience. All rights reserved.
+								Built with passion and innovation.</small>
+
+						</p>
+						<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="https://twitter.com/arnetexperience"><i class="fa-brands fa-x-twitter"></i></a></li>
+							<li><a href="https://www.youtube.com/@ARNetExperience-no6jb"><i class="icon-youtube2"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/arnetexperience-undefined-83625a2ba/"><i class="icon-linkedin2"></i></a></li>
+							<li><a href="https://www.instagram.com/arnetexperience/"><i class="icon-instagram"></i></a></li>
+						</ul>
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<script src="https://kit.fontawesome.com/ea03fb3bf9.js" crossorigin="anonymous"></script>
 
 </body>
 
