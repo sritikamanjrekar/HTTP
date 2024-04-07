@@ -1,18 +1,11 @@
-/* Reset some default styling */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-}
-
 /* Add CSS for the containers holding the model-viewer elements */
 
 .model-viewer-container {
   /* Set the display property to inline-block for inline layout with block-level box properties */
-  display: inline-block;
+
 
   /* Set the width of the container */
-  width: 30%;
+  width: 33%;
   /* Adjust the width as needed */
 
   /* Add margin to create spacing around the container */
@@ -22,22 +15,9 @@ body {
 
 
 
+/* Apply basic styles to the button with the class 'transparent-button' */
 
-/* Style the model-viewer elements if necessary */
-
-model-viewer {
-  /* Set the width of the model-viewer element to 100% */
-  width: 100%;
-
-  /* Set the height of the model-viewer element */
-  height: 300px;
-  /* Adjust the height as needed */
-}
-
-
- /* Apply basic styles to the button with the class 'transparent-button' */
-
- .transparent-button {
+.transparent-button {
   /* Set the background color of the button to transparent */
   background-color: white;
 
@@ -69,51 +49,51 @@ model-viewer {
 
   /* Keyframe at 0% */
   0% {
-      /* Set the color and border color to red */
-      color: red;
-      border-color: red;
+    /* Set the color and border color to red */
+    color: red;
+    border-color: red;
   }
 
   /* Keyframe at 16.666% */
   16.666% {
-      /* Set the color and border color to orange */
-      color: orange;
-      border-color: orange;
+    /* Set the color and border color to orange */
+    color: orange;
+    border-color: orange;
   }
 
   /* Keyframe at 33.333% */
   33.333% {
-      /* Set the color and border color to yellow */
-      color: yellow;
-      border-color: yellow;
+    /* Set the color and border color to yellow */
+    color: yellow;
+    border-color: yellow;
   }
 
   /* Keyframe at 50% */
   50% {
-      /* Set the color and border color to green */
-      color: green;
-      border-color: green;
+    /* Set the color and border color to green */
+    color: green;
+    border-color: green;
   }
 
   /* Keyframe at 66.666% */
   66.666% {
-      /* Set the color and border color to blue */
-      color: blue;
-      border-color: blue;
+    /* Set the color and border color to blue */
+    color: blue;
+    border-color: blue;
   }
 
   /* Keyframe at 83.333% */
   83.333% {
-      /* Set the color and border color to indigo */
-      color: indigo;
-      border-color: indigo;
+    /* Set the color and border color to indigo */
+    color: indigo;
+    border-color: indigo;
   }
 
   /* Keyframe at 100% */
   100% {
-      /* Set the color and border color to violet */
-      color: violet;
-      border-color: violet;
+    /* Set the color and border color to violet */
+    color: violet;
+    border-color: violet;
   }
 }
 
@@ -129,5 +109,526 @@ model-viewer {
   /* Set the text color on hover */
 }
 
+.packet-button:hover {
+  /* Set the background color to white on hover */
+  background-color: #ffffff;
+  /* Set the background color on hover */
+
+  /* Set the text color to black on hover */
+  color: #000000;
+  /* Set the text color on hover */
+}
+
+.packet-button {
+  /* Set the background color of the button to transparent */
+  background-color: #ffffff;
+
+  /* Set the text color of the button */
+  color: rgb(59, 0, 101);
+  /* Set the text color */
+
+  /* Add a border to the button with a 2px width and the specified color */
+  border: 2px solid rgb(59, 0, 101);
+  /* Set the border color */
+
+  /* Set the cursor to a pointer to indicate interactivity */
+  cursor: pointer;
+
+  /* Add a smooth transition effect for background color and text color changes */
+  transition: background-color 0.1s ease, color 0.1s ease;
+  /* Add a smooth transition effect */
+
+  /* Apply the 'rainbow' animation with a duration of 3s and infinite repeat */
+  animation: packet_color 10s infinite;
+  /* Add rainbow animation */
+  /* Add rainbow animation */
+}
 
 
+/* Define a keyframe animation named 'rainbow' */
+
+@keyframes packet_color {
+
+
+
+
+  50% {
+    /* Set the color and border color to green */
+    color: red;
+    border-color: red;
+  }
+
+  100% {
+    /* Set the color and border color to green */
+    color: blue;
+    border-color: blue;
+  }
+
+
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.3);
+  background: #ffffff url(broken_noise_@2X.png) repeat;
+  position: relative;
+}
+
+/* Center the model containers on the page */
+.model-container {
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  /* Add a maximum width to control container width */
+  height: 400px;
+  /* Set a fixed height for the container */
+  overflow: auto;
+  /* Add scrollbars if content overflows the container */
+}
+
+
+
+
+
+/* Style the h1 elements within the containers */
+.model-container h1 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Style the paragraph text within the containers */
+.model-container p {
+  font-size: 14px;
+  /* Adjust the font size as needed */
+  margin: 10px 0;
+  word-wrap: break-word;
+  /* Wrap text within the container */
+}
+
+/* Style the <model-viewer> elements */
+model-viewer {
+  width: 50%;
+  /* Adjust the width to fit your layout */
+  height: 300px;
+  /* Adjust the height to fit your layout */
+}
+
+
+
+
+#goToPageButton {
+  background-color: #0074d9;
+  /* Button background color */
+  color: #fff;
+  /* Text color */
+  padding: 10px 20px;
+  /* Padding around the text */
+  border: none;
+  /* Remove button border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Show pointer cursor on hover */
+  font-size: 16px;
+  /* Font size */
+}
+
+#goToPageButton:hover {
+  background-color: #0056b3;
+  /* Change background color on hover */
+}
+
+
+.fh5co-nav {
+  /* position: fixed; */
+  width: 100%;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 1001;
+  top: 0;
+  padding: 14px 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 480px) {
+  .fh5co-nav {
+    position: absolute;
+  }
+}
+
+.fh5co-nav.scrolled {
+  background: #000 url(../images/broken_noise.png) repeat;
+  top: -82px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .fh5co-nav.scrolled {
+    background: #000 url(../images/broken_noise.png) repeat;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fh5co-nav.scrolled {
+    background: transparent;
+  }
+}
+
+.fh5co-nav #fh5co-logo {
+  font-size: 32px;
+  margin: 0;
+  margin-top: -3%;
+  margin-bottom: 2%;
+  padding: 0;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: #fff !important;
+}
+
+.scrolled .fh5co-nav #fh5co-logo {
+  color: #000 !important;
+}
+
+.fh5co-nav #fh5co-logo a {
+  font-size: 42px;
+  color: #fff !important;
+}
+
+.scrolled .fh5co-nav #fh5co-logo a {
+  color: #000 !important;
+}
+
+.fh5co-nav #fh5co-logo a span {
+  color: #ea272d;
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-nav .menu-1 {
+    display: none;
+  }
+}
+
+.fh5co-nav ul {
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.fh5co-nav ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline;
+}
+
+.fh5co-nav ul li>a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.fh5co-nav ul li a {
+  padding: 30px 15px;
+  color: rgb(0, 0, 0);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.scrolled .fh5co-nav ul li a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.fh5co-nav ul li a:hover,
+.fh5co-nav ul li a:focus,
+.fh5co-nav ul li a:active {
+  color: #ea272d;
+}
+
+.scrolled .fh5co-nav ul li a:hover,
+.scrolled .fh5co-nav ul li a:focus,
+.scrolled .fh5co-nav ul li a:active {
+  color: black;
+}
+
+.fh5co-nav ul li.has-dropdown {
+  position: relative;
+}
+
+.fh5co-nav ul li.has-dropdown .dropdown {
+  width: 140px;
+  -webkit-box-shadow: 0px 14px 16px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 14px 16px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 14px 16px -9px rgba(0, 0, 0, 0.75);
+  z-index: 1002;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  text-align: left;
+  background: #ea272d;
+  padding: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+
+.fh5co-nav ul li.has-dropdown .dropdown:before {
+  bottom: 100%;
+  left: 40px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #ea272d;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.fh5co-nav ul li.has-dropdown .dropdown li {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.fh5co-nav ul li.has-dropdown .dropdown li:last-child {
+  margin-bottom: 0;
+}
+
+.fh5co-nav ul li.has-dropdown .dropdown li a {
+  font-size: 17px;
+  padding: 2px 0;
+  display: block;
+  color: white;
+  line-height: 1.2;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.fh5co-nav ul li.has-dropdown .dropdown li a:hover {
+  color: #fff;
+}
+
+.fh5co-nav ul li.has-dropdown:hover a,
+.fh5co-nav ul li.has-dropdown:focus a {
+  color: #fff;
+}
+
+.scrolled .fh5co-nav ul li.has-dropdown:hover a,
+.scrolled .fh5co-nav ul li.has-dropdown:focus a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.fh5co-nav ul li.active>a {
+  color: #ffffff;
+  position: relative;
+}
+
+.scrolled .fh5co-nav ul li.active>a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.fh5co-nav ul li.active>a:after {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: #ea272d;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-nav .menu-1 {
+    display: none;
+  }
+}
+
+h3 {
+  color: #000;
+  padding: 1%;
+}
+
+#fh5co-footer {
+  /* padding: 2em 0; */
+  padding-top: 1em;
+  padding-left: 0em;
+  padding-bottom: 0em;
+  padding-right: 0em;
+  clear: both;
+}
+
+.container{
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+
+  #fh5co-footer {
+    padding: 3em 0;
+
+  }
+}
+
+#fh5co-footer .fh5co-footer-links {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #fh5co-footer .fh5co-footer-links {
+    margin-bottom: 30px;
+  }
+}
+
+#fh5co-footer .fh5co-footer-links li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: rgba(0, 0, 0);
+}
+
+#fh5co-footer .fh5co-footer-links li a {
+  color: rgba(0, 0, 0);
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+
+}
+
+#fh5co-footer .fh5co-footer-links li a:hover {
+  text-decoration: none;
+  color: #ea272d;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#fh5co-footer .fh5co-widget {
+  margin-bottom: 30px;
+  margin-left: 70px;
+
+}
+
+@media screen and (max-width: 768px) {
+  #fh5co-footer .fh5co-widget {
+    text-align: left;
+  }
+}
+
+#fh5co-footer .fh5co-widget h4 {
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+#fh5co-footer .copyright .block {
+  display: block;
+}
+
+.contact-info {
+  margin-bottom: 4em;
+  padding: 0;
+}
+
+.contact-info li {
+  list-style: none;
+  margin: 0 0 20px 0;
+  position: relative;
+  padding-left: 40px;
+  color: #ffffff;
+}
+
+.contact-info li i {
+  position: absolute;
+  top: .3em;
+  left: 0;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-info li a {
+  color: #fff;
+}
+
+
+
+.fh5co-social-icons {
+  margin: 0;
+  padding: 0;
+}
+
+.fh5co-social-icons li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+
+.fh5co-social-icons li a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+  color: #ea272d;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+.fh5co-social-icons li a i {
+  font-size: 20px;
+}
+
+
+.fh5co-section {
+  padding: 7em 0;
+}
+
+@media screen and (max-width: 480px) {
+  .fh5co-section {
+    padding: 3em 0;
+  }
+}
+
+.fh5co-section p {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  line-height: 1.5;
+}

@@ -14,79 +14,57 @@
 
   <style>
     .connector {
-      /* Set the width of the connector element */
-      width: 18.7%;
-      /* Full width for the horizontal line */
 
-      /* Set the height of the connector line */
+      width: 33.4%;
+
       height: 4px;
-      /* Adjust the height of the connector line */
 
-      /* Set the background color of the connector line */
       background-color: blue;
-      /* Adjust the color as needed */
 
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
+      position: relative;
 
-      /* Set the left margin to position the connector horizontally */
-      margin-left: 21.4%;
-      /* Adjust the left margin as needed */
 
-      /* Set the top position to separate it from the models */
-      top: 41.7%;
-      /* Adjust the top position as needed */
+      margin-left: 12%;
 
-      /* Set the z-index to 1 for layering, ensuring it appears above other elements */
+      margin-top: -10%;
       z-index: 1;
-      /* Adjust the z-index as needed */
+
     }
 
     .connector1 {
-      /* Set the width of the connector element */
-      width: 23.7%;
-      /* Full width for the horizontal line */
 
-      /* Set the height of the connector line */
+      width: 31%;
+
       height: 4px;
-      /* Adjust the height of the connector line */
 
-      /* Set the background color of the connector line */
       background-color: red;
-      /* Adjust the color as needed */
 
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
+      position: relative;
 
-      /* Set the left margin to position the connector horizontally */
-      margin-left: 52%;
-      /* Adjust the left margin as needed */
 
-      /* Set the top position to separate it from the models */
-      top: 42.7%;
-      /* Adjust the top position as needed */
+      margin-left: 48%;
 
-      /* Set the z-index to 1 for layering, ensuring it appears above other elements */
+      margin-top: -7.3%;
       z-index: 1;
-      /* Adjust the z-index as needed */
+
     }
 
     .vertical-line {
       /* Set the height of the vertical line */
-      height: 315px;
+      height: 215px;
       /* Adjust the height as needed */
 
-
+      width: 1px;
       /* Set the left margin to position the vertical line to the left side */
-      margin-left: 48%;
+      margin-left: 47%;
       /* Adjust the left margin as needed */
 
       /* Set the top margin to position the vertical line up from the top */
-      margin-top: -8.9%;
+      margin-top: -11.6%;
       /* Adjust the top margin as needed */
 
       /* Set the position property to absolute for precise positioning */
-      position: absolute;
+      position: relative;
       /* Adjust the margin as needed */
 
       /* Change the color of the dashed border */
@@ -101,22 +79,23 @@
     }
 
     .salnted-line {
-      /* Set the height of the vertical line */
-      height: 500px;
-      /* Adjust the height as needed */
 
-      transform: rotate(60deg);
+      height: 550px;
+
+
+      transform: rotate(70deg);
       /* Set the left margin to position the vertical line to the left side */
-      margin-left: 28%;
-      /* Adjust the left margin as needed */
+      margin-left: 29%;
 
       /* Set the top margin to position the vertical line up from the top */
-      margin-top: -17.3%;
+      margin-top: -26%;
       /* Adjust the top margin as needed */
 
       /* Set the position property to absolute for precise positioning */
-      position: absolute;
+      position: relative;
       /* Adjust the margin as needed */
+
+      width: 1px;
 
       /* Change the color of the dashed border */
       border-color: purple;
@@ -181,38 +160,20 @@
       font-family: inherit;
     }
 
-    /* Define animation */
-    @keyframes colorChange {
-      0% {
-        color: #000f64;
-      }
 
-      50% {
-        color: #00b3ff;
-      }
-
-      100% {
-        color: #000f64;
-      }
-    }
-
-    /* Apply animation to the span */
-    h1 span:hover {
-      animation: colorChange 5s infinite;
-    }
 
 
     @keyframes moveRight {
       0% {
-        transform: translateX(0);
+        transform: translateX(10%);
       }
 
       50% {
-        transform: translateX(1000%);
+        transform: translateX(1300%);
       }
 
       100% {
-        transform: translateX(0);
+        transform: translateX(10%);
       }
     }
 
@@ -227,15 +188,15 @@
       }
 
       20% {
-        transform: translateY(-38vh) translateX(35vw);
+        transform: translateY(-26vh) translateX(35vw);
       }
 
       40% {
-        transform: translateY(-38vh) translateX(67vw);
+        transform: translateY(-26vh) translateX(67vw);
       }
 
       60% {
-        transform: translateY(-38vh) translateX(35vw);
+        transform: translateY(-26vh) translateX(35vw);
       }
 
       100% {
@@ -253,15 +214,15 @@
       }
 
       20% {
-        transform: translateY(-38vh) translateX(0);
+        transform: translateY(-25vh) translateX(0);
       }
 
       40% {
-        transform: translateY(-38vh) translateX(29vw);
+        transform: translateY(-25vh) translateX(29vw);
       }
 
       60% {
-        transform: translateY(-38vh) translateX(0vw);
+        transform: translateY(-25vh) translateX(0vw);
       }
 
       100% {
@@ -284,7 +245,21 @@
     }
   </style>
 
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link type="text/css" href="./styles.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Include the model-viewer JavaScript module -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+  <link rel="stylesheet" href="icomoon.css">
+
 
 </head>
 
@@ -295,45 +270,53 @@
 
   <br> <!-- Line break element -->
 
-  <!-- Container div -->
-  <div>
-    <a href="https://sritikamanjrekar.github.io/ARNetExperience/">
-      <img src="logo.png" alt="ARNetExperince" style="width: 12%;margin-left: 2%;"></a>
-    <div style="margin-left: 86%;margin-top: -3%;">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i
-          class="ri-facebook-fill btn btn-outline-primary" style="border-radius: 50%;"></i></a>
-      <a href="https://twitter.com/intent/tweet?url=https://sritikamanjrekar.github.io/HTTP/&text=Check%20out%20this%20awesome%20website!"
-        target="_blank"><i class="ri-twitter-fill  btn btn-outline-success"
-          style="border-radius: 50%;margin-left: 3%;"></i></a>
-      <a href="https://www.linkedin.com/shareArticle?url=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i
-          class="ri-linkedin-fill btn btn-outline-info" style="border-radius: 50%;margin-left: 3%;"></i></a>
-      <a href="whatsapp://send?text=Check%20out%20this%20awesome%20website!%20https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i class="ri-whatsapp-line btn btn-outline-danger"
-          style="border-radius: 50%;margin-left: 3%;"></i></a>
+
+  <nav class="fh5co-nav" role="navigation" style="background-image:url('');">
+    <!-- <div class="top-menu"> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center logo-wrap">
+          <div id="fh5co-logo"><a href="https://sritikamanjrekar.github.io/ARNetExperience/"><img src="logo.png"
+                alt="logo" width="20%" /><span></span></a></div>
+
+
+
+
+        </div>
+
+        <div class="col-xs-12 text-center menu-1 menu-wrap">
+          <ul>
+            <li><a href="https://sritikamanjrekar.github.io/ARNetExperience/">Home</a></li>
+
+
+            <li><a href="https://sritikamanjrekar.github.io/ARNetExperience/#fh5co-about">About</a></li>
+            <li><a href="https://sritikamanjrekar.github.io/ARNetExperience/learning.html">Start Learning</a></li>
+
+            <li><a href="https://sritikamanjrekar.github.io/ARNetExperience/learning.html">Manual</a></li>
+            <li><a href="https://sritikamanjrekar.github.io/ARNetExperience/contact.html">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
 
     </div>
+    <!-- </div> -->
+  </nav>
 
-    <!-- Center-aligned content using the deprecated <center> tag -->
-    <center>
+  <!-- Container div -->
+  <div>
+    <div style="margin-left: 86%;margin-top: -3%;">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i
+          class="ri-facebook-fill btn btn-primary" style="border-radius: 50%;"></i></a>
+      <a href="https://twitter.com/intent/tweet?url=https://sritikamanjrekar.github.io/HTTP/&text=Check%20out%20this%20awesome%20website!"
+        target="_blank"><i class="ri-twitter-x-fill  btn btn-success"
+          style="border-radius: 50%;margin-left: 3%;"></i></a>
+      <a href="https://www.linkedin.com/shareArticle?url=https://sritikamanjrekar.github.io/HTTP/" target="_blank"><i
+          class="ri-linkedin-fill btn btn-info" style="border-radius: 50%;margin-left: 3%;"></i></a>
+      <a href="whatsapp://send?text=Check%20out%20this%20awesome%20website!%20https://sritikamanjrekar.github.io/HTTP/"
+        target="_blank"><i class="ri-whatsapp-line btn btn-danger" style="border-radius: 50%;margin-left: 3%;"></i></a>
 
-      <!-- Heading element with text "File Transfer Protocols" -->
-
-      <h1 style="margin-top: -2%;"><b><span style="letter-spacing: 0.5cqmin;color: #000f64;">Hypertext Transfer Protocol
-            (HTTP)</span></b></h1>
-      <!-- Heading element -->
-
-
-
-
-      <button class="btn btn-outline-success btn-sm" onclick="openPdfPPT()">About HTTP</button>
-      &ensp;&ensp;<button class="btn btn-outline-primary btn-sm" onclick="openPdfDocs()">How To Use HTTP
-        Document</button>
-      &ensp;&ensp;<button class="btn btn-outline-danger btn-sm" onclick="openVideo()">How To Use HTTP Video</button>
-
-
-      <br> <!-- Line break element -->
-
-    </center>
-    <!-- End of center-aligned content -->
+    </div>
 
 
 
@@ -341,10 +324,12 @@
   <!-- End of container div -->
 
   <!-- <hr> Horizontal rule element -->
-  <br>
 
-  <div style="background-color:rgb(127, 206, 255);border-radius: 2%;margin: 0.3%;">
 
+  <div style="background-color:rgb(127, 206, 255);border-radius: 2%;margin: 0.3%;z-index: -4;margin-top:
+  2%;padding-bottom: 2%;">
+
+    <h3>Hypertext Markup Protocol (HTTP)</h3>
 
 
     <div class="model-viewer-container">
@@ -353,7 +338,7 @@
 
       <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
         tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
-        style="z-index: 2;">
+        style="z-index: 2;margin-left: 10%;">
         <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
           data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
           data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
@@ -371,20 +356,65 @@
 
     <div class="model-viewer-container">
 
+      <model-viewer src="router 2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
+        shadow-intensity="1" style="margin-left: 120%; margin-top: -42.2%;">
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-1"
+          data-position="37.69583283935017m 4.179193256400421m -51.57656243125259m"
+          data-normal="0.006317747746330481m 0.8348694792995796m -0.5504116991829504m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2Led">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>1</b></div>
+        </button>
 
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-1"
+          data-position="-0.3749784954434645m 32.58163092195337m -10.35857489224265m"
+          data-normal="0.0017078448797659893m 0.8294415367891209m -0.5585909239459302m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2IPAddress">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>2</b></div>
+        </button>
 
-      <model-viewer src="switch.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
-        shadow-intensity="1" >
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
-          data-position="-17.82355475016235m 6.123874902725213m -167.32013377219792m" data-normal="0m 1m 0m"
-          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Switch">
-          <div class="HotspotAnnotation">Switch</div>
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-2"
+          data-position="135.16326578752825m 239.44476987204035m 104.58417854752453m"
+          data-normal="-0.3023598593036365m 0.08772456858763628m 0.9491485213326724m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2Antennae">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>3</b></div>
+        </button>
+
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-4"
+          data-position="88.68420945971755m 37.07484256823129m 90.24227904773002m"
+          data-normal="-0.006649449923m 0.035971938355325576m 0.9993306782375304m" data-visibility-attribute="visible"
+          data-bs-toggle="modal" data-bs-target="#Router2ResetPort">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>4</b></div>
+        </button>
+
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-5"
+          data-position="47.33098605286284m 21.414614725837566m 90.94919976528135m"
+          data-normal="-0.006632683433363047m 0.027969467700564785m 0.999586772815157m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2PowerConnection">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>5</b></div>
+        </button>
+
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-6"
+          data-position="-0.8094441831126034m 33.45344550357601m 72.74334285260217m"
+          data-normal="-0.00698152627196316m 0.33872976862502435m 0.9408578012314887m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2InternetPort">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>6</b></div>
         </button>
 
 
+        <button class="Hotspot transparent-button" style="border-radius: 100%; ;" slot="hotspot-7"
+          data-position="-57.48814300733627m 30.28332503405524m 73.46407912897116m"
+          data-normal="-0.006981526271955822m 0.33872976862497106m 0.940857801231508m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2LANPort">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>7</b></div>
+        </button>
+
       </model-viewer>
 
+
+
     </div>
+
+
 
 
 
@@ -393,7 +423,7 @@
 
     <div class="model-viewer-container">
       <model-viewer src="server_racking_system.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        poster="poster.webp" shadow-intensity="1" style="z-index: 2;">
+        poster="poster.webp" shadow-intensity="1" style="z-index: 2;margin-left: 220%;margin-top: -30%;">
 
         <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-3"
           data-position="-0.2986763782425904m 1.905029363515141m 0.5064332606660245m"
@@ -417,7 +447,8 @@
 
 
       <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1" style="">
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+        style="margin-left: 10%;margin-top: -60%;">
         <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
           data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
           data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
@@ -436,7 +467,8 @@
 
 
       <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1" style="">
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+        style="margin-left:120%;margin-top: -60%;">
         <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
           data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
           data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
@@ -448,12 +480,14 @@
 
     </div>
 
+
+
     <div class="model-viewer-container">
 
       <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
         tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1"
-        style="width: 18%;z-index: 3;margin-left: -150%;margin-top: -135%;display: none; ">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+        style="width: 15%;z-index: 3;margin-left: 30%;margin-top: -110%; display: none;">
+        <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
           data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
           data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
           data-bs-target="#Modal1">
@@ -468,8 +502,8 @@
 
       <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
         tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model2"
-        style="width: 18%;z-index: 3;margin-left: 30%;margin-top: -78%; display: none;">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+        style="width: 15%;z-index: 3;margin-left: 30%;margin-top: -78%;display: none; ">
+        <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
           data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
           data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
           data-bs-target="#Modal2">
@@ -483,8 +517,8 @@
 
       <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
         tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model3"
-        style="width: 18%;z-index: 3;margin-left: 45%;margin-top: -78%; display: none;">
-        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+        style="width: 15%;z-index: 3;margin-left: 135%;margin-top: -78%;display: none; ">
+        <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
           data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
           data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
           data-bs-target="#Modal3">
@@ -495,411 +529,750 @@
     </div>
 
 
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PDU & OSI Details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="pc1 to server/1.png" alt="1" id="current-image">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PDU & OSI Details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="pc2 to server/1.png" alt="1" id="current-image2">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PDU & OSI Details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="pc3 to server/1.png" alt="1" id="current-image3">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Switch 2950-24</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+
+            <img src="switch295-24.PNG" alt="switch2950-24">
+            <img src="switch.jpg" alt="switch2950-24">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="PC1Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" >
+          <div class="modal-header bg-primary" >
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #ffffff;">PC-1 Browser</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+              id="PC1BrowserCloseBtn1"></button>
+          </div>
+          <div class="modal-body " >
+
+            <form>
+              <div class="mb-3">
+                <label for="ipaddressinput1" class="col-form-label" style="color: #000000;">Enter URL:</label>
+                <input type="text" class="form-control" id="ipaddressinput1" placeholder="Enter here URL you have updated for server to request the page from server.">
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer" >
+            <button class="btn btn-outline-primary" data-bs-target="#PC-1IpAddress" data-bs-toggle="modal">More
+              Info</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              id="PC1BrowserCloseBtn2">Close</button>
+
+            <button type="button" class="btn btn-primary" onclick="checkAndShowPreview1()">Enter</button>
+            <iframe id="preview_modal1" style="background-color: #f0f0f0;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="PC2Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #ffffff;">PC-2 Browser</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+              id="PC2BrowserCloseBtn1"></button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <div class="mb-3">
+                <label for="ipaddressinput2" class="col-form-label" style="color: #000000;">Enter URL:</label>
+                <input type="text" class="form-control" id="ipaddressinput2" placeholder="Enter here URL you have updated for server to request the page from server.">
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary" data-bs-target="#PC-2IpAddress" data-bs-toggle="modal">More
+              Info</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              id="PC2BrowserCloseBtn2">Close</button>
+
+            <button type="button" class="btn btn-primary" onclick="checkAndShowPreview2()">Enter</button>
+            <iframe id="preview_modal2" style="background-color: #f0f0f0;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="PC3Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #ffffff;">PC-3 Browser</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+              id="PC3BrowserCloseBtn1"></button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <div class="mb-3">
+                <label for="ipaddressinput3" class="col-form-label" style="color: #000000;">Enter URL:</label>
+                <input type="text" class="form-control" id="ipaddressinput3" placeholder="Enter here URL you have updated for server to request the page from server.">
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary" data-bs-target="#PC-3IpAddress" data-bs-toggle="modal">More
+              Info</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              id="PC3BrowserCloseBtn2">Close</button>
+
+            <button type="button" class="btn btn-primary" onclick="checkAndShowPreview3()">Enter</button>
+            <iframe id="preview_modal3" style="background-color: #f0f0f0;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="PC-1IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Windows OS PC-1</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC1IPAdressCloseBtn"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+            IP Address > 192.168.11.1
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"
+              id="PC1IPAdressBtn">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="PC-2IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Windows OS PC-2</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC2IPAdressCloseBtn"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+            IP Address > 192.168.11.2
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"
+              id="PC2IPAdressBtn">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="PC-3IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Windows OS PC-3</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC3IPAdressCloseBtn"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+            IP Address > 192.168.11.3
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"
+              id="PC3IPAdressBtn">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="ServerIpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Server</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+            Device Name > Server<br><br>
+            IP Address > 192.168.11.4<br><br>
+            MAC Address > 0001.4372.8CE6<br><br>
+            Cable Type > Fast Ethernet<br><br>
+            ARP Table > <br>
+            <table class="table table-danger table-hover table-bordered border-danger">
+              <thead>
+                <tr>
+                  <th scope="col" style="color: #000000;">IP Address</th>
+                  <th scope="col" style="color: #000000;">Hardware Address</th>
+                  <th scope="col" style="color: #000000;">Interface</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                  <td style="color: #000000;">192.168.11.2</td>
+                  <td style="color: #000000;">000A.413C.D55E</td>
+                  <td style="color: #000000;">Fast Ethernet</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="Connector" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Fast Ethernet 0/1 RS-232 Wire
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+
+            <img src="rs232.jpg" alt="RS 232">
+            <img src="pinrs232.jpg" alt="Pin number of RS-232">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Switch 2950-24</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+
+            <img src="switch295-24.PNG" alt="switch2950-24">
+            <img src="switch.jpg" alt="switch2950-24">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="browser" style="background-color: #ffffff; margin-top: 16%;">
+      <div class="address-bar">
+        <span class="icon"></span>
+        <input type="text" class="address-input" placeholder="Set URL here to update on Server" id="addressInput">
+      </div>
+      <iframe id="preview"></iframe>
+    </div>
+    <div class="code-editor" style="background-color: #ffffff; padding: 1%;">
+      <textarea
+        id="html-code"><!-- Write your HTML, CSS, JS code here. Also, you can try JQuery, XML, AngularJS, Vue, W3.js. Additionally, you can write in normal text without any coding. --></textarea>
+      <button class="btn btn-outline-primary" onclick="updatePreview()">Update</button>
+    </div>
+
   </div>
 
 
   <!-- Modal -->
-  <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+  <div class="modal fade" id="Router2Led" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="pc1 to server/1.png" alt="1" id="current-image">
-       
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">LED Lights</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+              Lights indicate signal power, internet, and port status to keep users informed.
+              <img src="1.png" width="100%" height="100%">
 
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Okay</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="Router2IPAddress" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Router</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+              <input type="text" id="textToCopy3" value="10.10.10.1" hidden>
+              IP Adress > 10.10.10.1
+             
+              <img src="2.png" width="100%" height="100%">
+
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Okay</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="Router2Antennae" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Antennae</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+              Antennae broadcast wireless signals in your home network.
+              <img src="3.png" width="100%" height="100%">
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Okay</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="Router2ResetPort" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Reset Port</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+              Port for resetting router to factory defaults.
+              <img src="4.png" width="100%" height="100%">
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="Router2PowerConnection" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Power Connection
+              </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+              Power adapter port for router connection.
+              <img src="5.png" width="100%" height="100%">
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="Router2InternetPort" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">WAN/Internet
+                  Port</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+              Connect modem or transceiver to link home network to internet.
+              <img src="6.png" width="100%" height="100%">
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="Router2LANPort" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">LAN Ports</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" style="color: #000000;">
+              Ports for wired devices on home network without wireless capability.
+              <img src="7.png" width="100%" height="100%">
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary"
+                  data-bs-dismiss="modal">Okay</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
+    <div class="container">
+      <div class="row row-pb-md">
+        <div class="col-md-4 fh5co-widget">
+          <!-- <h4 style="color: #ffffff;">ARNetExperience</h4> -->
+          <a href="https://sritikamanjrekar.github.io/ARNetExperience/"><img src="logo.png" alt="" width="60%"></a>
+          <br><br>
+          <p style="color: #000000;">Step into the Future of Learning with ARNetExperience | Explore
+            Computer
+            Networks like Never
+            Before!</p>
+        </div>
+        <div class="col-md-2 col-md-push-1 fh5co-widget">
+          <h4>Links</h4>
+          <ul class="fh5co-footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#fh5co-about">About</a></li>
+            <li><a href="learning.html">Start Learning</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+
+          </ul>
+        </div>
+
+
+
+        <div class="col-md-4 col-md-push-1 fh5co-widget">
+          <h4>Contact Information</h4>
+          <ul class="fh5co-footer-links">
+            <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
+            <!-- <li><a href="tel://1234567920">+ 1235 2355 98</a></li> -->
+            <li><a href="mailto:arnetexperience20@gmail.com
+                          ">arnetexperience20@gmail.com
+              </a></li>
+
+          </ul>
+        </div>
+
+      </div>
+
+
+
+      <div class="row copyright">
+        <div class="col-md-12 text-center">
+          <p>
+            <small class="block" style="color: #000000;">© 2024 ARNetExperience. All rights
+              reserved.
+              Built with passion and innovation.</small>
+
+          </p>
+          <p>
+          <ul class="fh5co-social-icons">
+            <li><a href="https://twitter.com/arnetexperience"><i class="ri-twitter-x-fill"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/@ARNetExperience-no6jb"><i class="ri-youtube-fill"></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/arnetexperience/"><i class="ri-linkedin-box-fill"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/arnetexperience/"><i class="ri-instagram-fill"></i></a>
+            </li>
+          </ul>
+          </p>
         </div>
       </div>
+
     </div>
-  </div>
-
-  <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="pc2 to server/1.png" alt="1" id="current-image2">
-       
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="pc3 to server/1.png" alt="1" id="current-image3">
-       
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Switch 2950-24</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-
-          <img src="switch295-24.PNG" alt="switch2950-24">
-          <img src="switch.jpg" alt="switch2950-24">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="modal fade" id="PC1Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-1 Browser</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-            id="PC1BrowserCloseBtn1"></button>
-        </div>
-        <div class="modal-body">
-
-          <form>
-            <div class="mb-3">
-              <label for="ipaddressinput1" class="col-form-label">Enter URL:</label>
-              <input type="text" class="form-control" id="ipaddressinput1">
-            </div>
-
-          </form>
-
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-primary" data-bs-target="#PC-1IpAddress" data-bs-toggle="modal">More
-            Info</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-            id="PC1BrowserCloseBtn2">Close</button>
-
-          <button type="button" class="btn btn-primary" onclick="checkAndShowPreview()">Enter</button>
-          <iframe id="preview_modal1"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="PC2Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-2 Browser</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-            id="PC2BrowserCloseBtn1"></button>
-        </div>
-        <div class="modal-body">
-
-          <form>
-            <div class="mb-3">
-              <label for="ipaddressinput2" class="col-form-label">Enter URL:</label>
-              <input type="text" class="form-control" id="ipaddressinput2">
-            </div>
-
-          </form>
-
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-primary" data-bs-target="#PC-2IpAddress" data-bs-toggle="modal">More
-            Info</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-            id="PC2BrowserCloseBtn2">Close</button>
-
-          <button type="button" class="btn btn-primary" onclick="checkAndShowPreview()">Enter</button>
-          <iframe id="preview_modal2"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="PC3Browser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-3 Browser</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-            id="PC3BrowserCloseBtn1"></button>
-        </div>
-        <div class="modal-body">
-
-          <form>
-            <div class="mb-3">
-              <label for="ipaddressinput3" class="col-form-label">Enter URL:</label>
-              <input type="text" class="form-control" id="ipaddressinput3">
-            </div>
-
-          </form>
-
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-primary" data-bs-target="#PC-3IpAddress" data-bs-toggle="modal">More
-            Info</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-            id="PC3BrowserCloseBtn2">Close</button>
-
-          <button type="button" class="btn btn-primary" onclick="checkAndShowPreview()">Enter</button>
-          <iframe id="preview_modal3"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="modal fade" id="PC-1IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-1</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC1IPAdressCloseBtn"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.1
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="PC1IPAdressBtn">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="PC-2IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-2</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC2IPAdressCloseBtn"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.2
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="PC2IPAdressBtn">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="PC-3IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-3</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" id="PC3IPAdressCloseBtn"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.3
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="PC3IPAdressBtn">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="ServerIpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Server</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          Device Name > Server<br><br>
-          IP Address > 192.168.11.4<br><br>
-          MAC Address > 0001.4372.8CE6<br><br>
-          Cable Type > Fast Ethernet<br><br>
-          ARP Table > <br>
-          <table class="table table-danger table-hover table-bordered border-danger">
-            <thead>
-              <tr>
-                <th scope="col">IP Address</th>
-                <th scope="col">Hardware Address</th>
-                <th scope="col">Interface</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-
-                <td>192.168.11.2</td>
-                <td>000A.413C.D55E</td>
-                <td>Fast Ethernet</td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="Connector" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Fast Ethernet 0/1 RS-232 Wire</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-
-          <img src="rs232.jpg" alt="RS 232">
-          <img src="pinrs232.jpg" alt="Pin number of RS-232">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Switch 2950-24</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-
-          <img src="switch295-24.PNG" alt="switch2950-24">
-          <img src="switch.jpg" alt="switch2950-24">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="browser">
-    <div class="address-bar">
-      <span class="icon"></span>
-      <input type="text" class="address-input" placeholder="Enter URL" id="addressInput">
-    </div>
-    <iframe id="preview"></iframe>
-  </div>
-  <div class="code-editor">
-    <textarea id="html-code"><!-- Write your HTML, CSS, JS code here. Also you can try here JQuery, XML, AngularJS, Vue, W3.js--></textarea>
-    <button class="btn btn-outline-primary" onclick="updatePreview()">Update</button>
-  </div>
-
+  </footer>
 
   <script>
- // JavaScript for changing images
- document.addEventListener("DOMContentLoaded", function() {
-        let currentIndex = 1; // Index of the current image
-        const totalImages = 127; // Total number of images
-        const imageElement = document.getElementById('current-image');
+    window.onload = function() {
+    setTimeout(function() {
+        alert("Hello there! To perform HTTP requests, you need to set the URL (domain name and content of the page).\nClick the 'Update' button to set it for the server.");
+    }, 5000); // 5000 milliseconds = 5 seconds
+};
 
-        function changeImage() {
-            currentIndex = (currentIndex % totalImages) + 1;
-            imageElement.src = `pc1 to server/${currentIndex}.png`; // Update image src
-            imageElement.alt = `${currentIndex}`; // Update image alt
-        }
 
-        // Change image every 3 seconds
-        setInterval(changeImage, 3000);
-    });
-
-    // JavaScript for changing images
- document.addEventListener("DOMContentLoaded", function() {
-        let currentIndex = 1; // Index of the current image
-        const totalImages = 133; // Total number of images
-        const imageElement = document.getElementById('current-image2');
-
-        function changeImage() {
-            currentIndex = (currentIndex % totalImages) + 1;
-            imageElement.src = `pc2 to server/${currentIndex}.png`; // Update image src
-            imageElement.alt = `${currentIndex}`; // Update image alt
-        }
-
-        // Change image every 3 seconds
-        setInterval(changeImage, 3000);
-    });
 
 
     // JavaScript for changing images
- document.addEventListener("DOMContentLoaded", function() {
-        let currentIndex = 1; // Index of the current image
-        const totalImages = 133; // Total number of images
-        const imageElement = document.getElementById('current-image3');
+    document.addEventListener("DOMContentLoaded", function () {
+      let currentIndex = 1; // Index of the current image
+      const totalImages = 127; // Total number of images
+      const imageElement = document.getElementById('current-image');
 
-        function changeImage() {
-            currentIndex = (currentIndex % totalImages) + 1;
-            imageElement.src = `pc3 to server/${currentIndex}.png`; // Update image src
-            imageElement.alt = `${currentIndex}`; // Update image alt
-        }
+      function changeImage() {
+        currentIndex = (currentIndex % totalImages) + 1;
+        imageElement.src = `pc1 to server/${currentIndex}.png`; // Update image src
+        imageElement.alt = `${currentIndex}`; // Update image alt
+      }
 
-        // Change image every 3 seconds
-        setInterval(changeImage, 3000);
+      // Change image every 3 seconds
+      setInterval(changeImage, 3000);
+    });
+
+    // JavaScript for changing images
+    document.addEventListener("DOMContentLoaded", function () {
+      let currentIndex = 1; // Index of the current image
+      const totalImages = 133; // Total number of images
+      const imageElement = document.getElementById('current-image2');
+
+      function changeImage() {
+        currentIndex = (currentIndex % totalImages) + 1;
+        imageElement.src = `pc2 to server/${currentIndex}.png`; // Update image src
+        imageElement.alt = `${currentIndex}`; // Update image alt
+      }
+
+      // Change image every 3 seconds
+      setInterval(changeImage, 3000);
+    });
+
+
+    // JavaScript for changing images
+    document.addEventListener("DOMContentLoaded", function () {
+      let currentIndex = 1; // Index of the current image
+      const totalImages = 133; // Total number of images
+      const imageElement = document.getElementById('current-image3');
+
+      function changeImage() {
+        currentIndex = (currentIndex % totalImages) + 1;
+        imageElement.src = `pc3 to server/${currentIndex}.png`; // Update image src
+        imageElement.alt = `${currentIndex}`; // Update image alt
+      }
+
+      // Change image every 3 seconds
+      setInterval(changeImage, 3000);
     });
 
 
     function updatePreview() {
+      var addressInput = document.getElementById('addressInput').value;
+
+      // Check if addressInput is empty
+      if (addressInput.trim() === '') {
+        alert('URL field cannot be empty.');
+        return;
+      }
+
+      // Validate addressInput
+      if (!isValidURL(addressInput)) {
+        alert('The URL entered is either invalid or the domain name "' + addressInput + '" is already in use. \n\nOR\n\nYou must have enter a invalid URL. Please enter valid URL.\nExample: https://www.example.com');
+        return;
+      }
+
+
+
       var htmlCode = document.getElementById('html-code').value;
+
+
+      // Validate HTML code
+      if (!htmlCode.trim() || htmlCode.trim().length === 0) {
+        alert('Please enter some HTML code or text');
+        return;
+      }
+
+      if (!containsText(htmlCode)) {
+        alert('Please enter HTML code or some text.');
+        return;
+      }
+
       var previewFrame = document.getElementById('preview');
       var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
       preview.open();
       preview.write(htmlCode);
       preview.close();
 
+
+      
+
       // Save HTML content to localStorage
       localStorage.setItem('savedHTML', htmlCode);
+
+      alert("URL Updated on Server. Click on any PC-1 or PC-2 or PC-3 to open Browser.")
     }
 
-    
+    function containsText(htmlCode) {
+      // Remove HTML comments
+      var codeWithoutComments = htmlCode.replace(/<!--[\s\S]*?-->/g, '');
 
-    var matchFound = false;
-    function checkAndShowPreview() {
+  // Remove whitespace
+  var codeWithoutWhitespace = codeWithoutComments.replace(/\s+/g, '');
+
+      // Check if there's any text left after removing comments and whitespace
+      return codeWithoutWhitespace.length > 0;
+    }
+
+
+
+    function isValidURL(url) {
+      // Regular expression to match a URL
+      var urlRegex = /^(?:https?:\/\/)?(?:www\.)?\w+\.\w{2,}(?:\/.*)?$/;
+
+      // List of disallowed domain names
+      var disallowedDomains = ['google.com', 'facebook.com', 'amazon.com',
+        'youtube.com',
+        'twitter.com',
+        'instagram.com',
+        'linkedin.com',
+        'reddit.com',
+        'microsoft.com',
+        'apple.com',
+        'netflix.com',
+        'ebay.com',
+        'wikipedia.org',
+        'yahoo.com',
+        'cnn.com']; // Add more domains as needed
+
+      // Check if the URL matches the regex pattern
+      if (!urlRegex.test(url)) {
+        return false;
+      }
+
+      // Check if the URL contains any disallowed domain name
+      for (var i = 0; i < disallowedDomains.length; i++) {
+        if (url.includes(disallowedDomains[i])) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+
+
+    // function updatePreview() {
+    //   var htmlCode = document.getElementById('html-code').value;
+    //   var previewFrame = document.getElementById('preview');
+    //   var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
+    //   preview.open();
+    //   preview.write(htmlCode);
+    //   preview.close();
+
+    //   // Save HTML content to localStorage
+    //   localStorage.setItem('savedHTML', htmlCode);
+    // }
+
+
+
+    var matchFound1 = false;
+    var matchFound2 = false;
+    var matchFound3 = false;
+
+    function checkAndShowPreview1() {
       var ipAddressinput1 = document.getElementById('ipaddressinput1').value;
-      var ipAddressinput2 = document.getElementById('ipaddressinput2').value;
-      var ipAddressinput3 = document.getElementById('ipaddressinput3').value;
       var addressInput = document.getElementById('addressInput').value;
-     
+
       var htmlCode = document.getElementById('html-code').value;
 
 
@@ -916,12 +1289,31 @@
         // Save HTML content to localStorage
         localStorage.setItem('savedHTML', htmlCode);
 
-        matchFound = true;
+        matchFound1 = true;
 
 
 
-      } 
-      
+      }
+
+      if (matchFound1 == false) {
+        alert('IP address does not match the entered URL.');
+      }
+
+
+
+
+      //return matchFound;
+    }
+
+    function checkAndShowPreview2() {
+      var ipAddressinput2 = document.getElementById('ipaddressinput2').value;
+      var addressInput = document.getElementById('addressInput').value;
+
+      var htmlCode = document.getElementById('html-code').value;
+
+
+
+
       if (ipAddressinput2 === addressInput) {
         var previewIframe = document.getElementById('preview');
         var previewModalIframe = document.getElementById('preview_modal2');
@@ -934,9 +1326,26 @@
         // Save HTML content to localStorage
         localStorage.setItem('savedHTML', htmlCode);
 
-        matchFound = true;
-      } 
-      
+        matchFound2 = true;
+      }
+
+
+      if (matchFound2 == false) {
+        alert('IP address does not match the entered URL.');
+      }
+
+
+
+
+      //return matchFound;
+    }
+
+    function checkAndShowPreview3() {
+      var ipAddressinput3 = document.getElementById('ipaddressinput3').value;
+      var addressInput = document.getElementById('addressInput').value;
+
+      var htmlCode = document.getElementById('html-code').value;
+
       if (ipAddressinput3 === addressInput) {
         var previewIframe = document.getElementById('preview');
         var previewModalIframe = document.getElementById('preview_modal3');
@@ -949,14 +1358,17 @@
         // Save HTML content to localStorage
         localStorage.setItem('savedHTML', htmlCode);
 
-        matchFound = true;
+        matchFound3 = true;
 
 
       }
 
-      if (!matchFound) {
+      if (matchFound3 == false) {
         alert('IP address does not match the entered URL.');
       }
+
+
+
 
       //return matchFound;
     }
@@ -965,14 +1377,14 @@
     // Event listener for the close button
     document.getElementById('PC1BrowserCloseBtn1').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound1) {
         triggerAnimationAndShowViewer();
       }
     });
 
     document.getElementById('PC1BrowserCloseBtn2').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound1) {
         triggerAnimationAndShowViewer();
       }
     });
@@ -980,7 +1392,7 @@
     // Event listener for the close button
     document.getElementById('PC1IPAdressCloseBtn').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound1) {
         triggerAnimationAndShowViewer();
       }
     });
@@ -988,7 +1400,7 @@
     // Event listener for the close button
     document.getElementById('PC1IPAdressBtn').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound1) {
         triggerAnimationAndShowViewer();
       }
     });
@@ -998,16 +1410,16 @@
     // Event listener for the close button
     document.getElementById('PC2BrowserCloseBtn1').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound2) {
         var modelViewer = document.getElementById('model2');
         modelViewer.style.animation = 'moveUpRight 20s ease-in-out 3 forwards;';
         modelViewer.style.display = 'block';
-        
+
         // When the animation ends, hide the model-viewer element
         modelViewer.addEventListener('animationend', function () {
           alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
 
-        modelViewer.style.display = 'none';
+          modelViewer.style.display = 'none';
         });
       }
     });
@@ -1015,11 +1427,11 @@
     // Event listener for the close button
     document.getElementById('PC2BrowserCloseBtn2').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound2) {
         var modelViewer = document.getElementById('model2');
         modelViewer.style.animation = 'moveUpRight 20s ease-in-out 3 forwards;';
         modelViewer.style.display = 'block';
-       
+
         // When the animation ends, hide the model-viewer element
         modelViewer.addEventListener('animationend', function () {
           alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
@@ -1032,11 +1444,11 @@
     // Event listener for the close button
     document.getElementById('PC3BrowserCloseBtn1').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound3) {
         var modelViewer = document.getElementById('model3');
         modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
         modelViewer.style.display = 'block';
-       
+
         // When the animation ends, hide the model-viewer element
         modelViewer.addEventListener('animationend', function () {
           alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
@@ -1049,11 +1461,11 @@
     // Event listener for the close button
     document.getElementById('PC3BrowserCloseBtn2').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound3) {
         var modelViewer = document.getElementById('model3');
         modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
         modelViewer.style.display = 'block';
-       
+
         // When the animation ends, hide the model-viewer element
         modelViewer.addEventListener('animationend', function () {
           alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
@@ -1066,11 +1478,11 @@
     // Event listener for the close button
     document.getElementById('PC2IPAdressCloseBtn').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound2) {
         var modelViewer = document.getElementById('model3');
         modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
         modelViewer.style.display = 'block';
-       
+
         // When the animation ends, hide the model-viewer element
         modelViewer.addEventListener('animationend', function () {
           alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
@@ -1083,11 +1495,11 @@
     // Event listener for the close button
     document.getElementById('PC2IPAdressBtn').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound2) {
         var modelViewer = document.getElementById('model3');
         modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
         modelViewer.style.display = 'block';
-       
+
         // When the animation ends, hide the model-viewer element
         modelViewer.addEventListener('animationend', function () {
           alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
@@ -1101,11 +1513,11 @@
     // Event listener for the close button
     document.getElementById('PC3IPAdressCloseBtn').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound3) {
         var modelViewer = document.getElementById('model3');
         modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
         modelViewer.style.display = 'block';
-       
+
         // When the animation ends, hide the model-viewer element
         modelViewer.addEventListener('animationend', function () {
           alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
@@ -1118,11 +1530,11 @@
     // Event listener for the close button
     document.getElementById('PC3IPAdressBtn').addEventListener('click', function () {
       // Check if matchFound is true
-      if (matchFound) {
+      if (matchFound3) {
         var modelViewer = document.getElementById('model3');
         modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
         modelViewer.style.display = 'block';
-       
+
         // When the animation ends, hide the model-viewer element
         modelViewer.addEventListener('animationend', function () {
           alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
@@ -1139,7 +1551,7 @@
       var modelViewer = document.getElementById('model1');
       modelViewer.style.animation = 'moveRight 20s linear 3';
       modelViewer.style.display = 'block';
-     
+
       // When the animation ends, hide the model-viewer element
       modelViewer.addEventListener('animationend', function () {
         alert('This way HTTP Protocol works when you enter a url in the browser get data from server');
@@ -1221,8 +1633,10 @@
     function openPdfDocs() {
       window.open('openPdfDocs.html', '_blank');
     }
-  </script>
 
+
+
+  </script>
 
 
 
@@ -1237,6 +1651,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
