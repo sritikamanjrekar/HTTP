@@ -3,83 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dynamic Preview</title>
+<title>Image Slider</title>
 <style>
-  .browser {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .address-bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .address-bar .icon {
-    width: 20px;
-    height: 20px;
-    background-color: #ddd;
-    margin-right: 5px;
-  }
-  .code-editor {
-    margin-bottom: 20px;
-  }
-  textarea {
-    width: 100%;
-    height: 200px;
-    resize: none;
-  }
+    /* Style for the slider container */
+    .slider-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Style for the images */
+    .slider-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Hide all images by default, except the first one */
+    .slider-container img:not(:first-child) {
+        display: none;
+    }
 </style>
 </head>
 <body>
 
-  
-
-<div class="browser">
-  <div class="address-bar">
-    <span class="icon"></span>
-    <input type="text" class="address-input" id="addressInput" placeholder="Enter URL">
-  </div>
-  <iframe id="preview"></iframe>
-</div>
-
-<div class="code-editor">
-  <textarea id="html-code" placeholder="Enter HTML code"></textarea>
-  <button class="btn btn-outline-primary" onclick="updatePreview()">Update</button>
-  <button class="btn btn-outline-primary" onclick="openPreview()">Open</button>
+<div class="slider-container">
+    <img src="rs232.jpg" alt="Image 1">
+    <img src="switch.jpg" alt="Image 2">
+    <img src="logo.png" alt="Image 3">
 </div>
 
 <script>
-  // Function to update preview
-  function updatePreview() {
-    const htmlCode = document.getElementById('html-code').value;
-    const iframe = document.getElementById('preview');
-    const doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(htmlCode);
-    doc.close();
-    
-    // Save HTML content to localStorage
-    localStorage.setItem('savedHTML', htmlCode);
-  }
+    // JavaScript for changing images
+    document.addEventListener("DOMContentLoaded", function() {
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider-container img');
+        const totalImages = images.length;
 
-  // Function to open preview in new tab
-  function openPreview() {
-    const savedHTML = localStorage.getItem('savedHTML');
-    const addressInputValue = document.getElementById('addressInput').value;
-    if (savedHTML) {
-      // Open a new tab with about:blank initially
-      const newTab = window.open('about:blank');
-      // When the new tab's document is loaded, write the saved HTML content and update the URL
-      newTab.onload = function() {
-        newTab.document.write(savedHTML);
-        newTab.history.pushState({}, '', 'https://' + addressInputValue);
-      };
-    } else {
-      alert('Please update HTML code first.');
-    }
-  }
+        function showImage(index) {
+            images.forEach((image, i) => {
+                if (i === index) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        // Change image every 3 seconds
+        setInterval(nextImage, 3000);
+    });
 </script>
 
 </body>

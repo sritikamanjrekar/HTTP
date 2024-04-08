@@ -2,3 +2,22 @@ PC1 > 192.168.11.1
 PC2 > 192.168.11.2
 PC3 > 192.168.11.3
 Server > 181.168.11.4
+
+TO DO:-
+
+
+✅ add validation to the enter url 
+
+✅  add content validation alert message
+
+✅  add alert message when you click on update 
+
+✅  click on any PC1, PC2, PC3 to open PC browser
+
+✅ add hint or placeholder to the enter URL for all PC browser
+
+✅ add more alert message
+
+✅ router images add 
+
+
